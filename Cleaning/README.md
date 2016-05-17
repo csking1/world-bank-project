@@ -8,4 +8,4 @@
 
 4. transform.py: Impute missing values and create clean csvs for projects, contracts, and investigations to hand to Features.
 
-Note: The public files are too large to store on github, so they'll need to be gotten from the api for viewing.3
+Note: The public files are too large to store on github, so they'll need to be gotten from the api for viewing.
