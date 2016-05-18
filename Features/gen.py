@@ -3,7 +3,11 @@ import pandas as pd
 import explore_clean as exp
 import numpy as np
 
-filename = "../Example/landing.csv"
+Y_VAR = "allegation_outcome"
+
+def read_data(filename):
+    df = pd.read_csv(filename)
+    return df
 
 def data_summary(dataframe):
  
@@ -14,15 +18,18 @@ def data_summary(dataframe):
     print("----------------Mode:--------------------" '\n', dataframe.mode().to_string(index = False))
     print("----------------Correlation Matrix:------" "\n", dataframe.corr())
     print("----------------Missing Values:----------" "\n", dataframe.isnull().sum().to_string())
-def read_data(filename):
 
-    df = pd.read_csv(filename)
-    return df
+
+def procurement_method(df):
+    pass
+
+
+
 def go(filename):
     df = read_data(filename)
     data_summary(df)
-    print (df.allegation_outcome)
-
+    # print (df.allegation_category)
+    print (df.objective)
 
 filename = "../Example/landing.csv"
 go(filename)
