@@ -18,19 +18,37 @@ LOG = []
 Y_VAR = "allegation_outcome"
 
 def read_data(filename):
+    '''
+    Takes in csv filename and outputs pandas df
+    '''
     df = pd.read_csv(filename)
     return df
 
-def binary_variable(dataframe, variable):
-    data[column] = data[column].apply(lambda x: 0 if \
-        column == variable else 1)
 
-
-def binary(dataframe, column):
-    dummies = pd.get_dummies(df[column])
+def cat_to_binary(df, column):
+    print ("in dummy function")
+    dummies = pd.get_dummies(df[column], column, drop_first=True)
     df = df.join(dummies)
     return df
 
+
+def binary_helper(x):
+
+    if x == "Unsubstantiated":
+        return int(0)
+    if x == "Substantiated":
+        return int(1)
+    else:
+        return None
+
+def create_binary(df, column):
+    '''
+    Takes a df and column wtih categorical binary vaues
+    Transforms into numberical binary values 0 and 1
+    '''
+
+    df[column] = df[column].apply(binary_helper)
+    return df
 def binning_data(dataframe, variable, bins):
 
     col = "bin " + str(variable)
@@ -46,14 +64,14 @@ def feature_generation(dataframe):
     model = model.fit(x, y)
     testing = model.score(x, y)
     print ("accuracy score of {}".format(testing))
-
-    # return x, y
+    return x, y
 
 
 def go(filename):
     df = read_data(filename)
+    create_binary(df, Y_VAR)
     feature_generation(df)
-
+    #leaving off right here
 
  
     # print (df.as_of_date)
