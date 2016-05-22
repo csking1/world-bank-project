@@ -1,20 +1,30 @@
 import csv
 import pandas as pd
-import explore_clean as exp
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2
 from sklearn.linear_model import LogisticRegression
 
-DROP = []
-BINARY = []
-CATEG = []
-LOG = []
-#variables to drop:
-#as_of_date
-#use feature selection as a preliminary
-#
+DROP_LIST = ['Unnamed: 0', 'Unnamed: 0.1', 'as_of_date',
+       'borrower_contract_reference_number',
+       'borrower_country_code', 'contract_description',
+       'contract_signing_date', 'country', 
+       'project_id', 'project_name', 'region', 'supplier',
+       'supplier_country', 'supplier_country_code', 'wb_contract_number',
+       'resolved_supplier', 'orig_supplier_name', 'year_x', 'month',
+       'Country Name_x', 'Country Code_x',
+       'Indicator Name_x', 'Indicator Code_x', 'year_y',
+       'Country Name_y', 'Country Code_y', 'Indicator Name_y',
+       'Indicator Code_y','allegation_category',
+       'outcome_val', 'wb_id', 'objective', 'competitive']
+
+DUMMY_LIST = ['fiscal_year', 'major_sector', 'procurement_category', \
+'procurement_method', 'procurement_type', 'product_line',  'country_name_standardized', \
+'ppp']
+
+BINARY = ['allegation_outcome', ]
+
 Y_VAR = "allegation_outcome"
 
 def read_data(filename):
@@ -24,13 +34,13 @@ def read_data(filename):
     df = pd.read_csv(filename)
     return df
 
+def cat_to_binary(df):
 
-def cat_to_binary(df, column):
-    print ("in dummy function")
-    dummies = pd.get_dummies(df[column], column, drop_first=True)
-    df = df.join(dummies)
+    for col in DUMMY_LIST:
+        dummies = pd.get_dummies(df[col], col, drop_first=True)
+        DROP_LIST.append(col)
+        df = df.join(dummies)
     return df
-
 
 def binary_helper(x):
 
@@ -48,13 +58,18 @@ def create_binary(df, column):
     '''
 
     df[column] = df[column].apply(binary_helper)
-    return df
+
 def binning_data(dataframe, variable, bins):
 
     col = "bin " + str(variable)
     dataframe[col] = pd.cut(dataframe[variable], bins=bins, \
         include_lowest=True, labels=False)
     return col
+
+def drop_columns(df):
+    for col in DROP_LIST:
+        df = df.drop(col, axis=1)
+    return df
 
 def feature_generation(dataframe):
     y = dataframe[Y_VAR]
@@ -65,47 +80,19 @@ def feature_generation(dataframe):
     testing = model.score(x, y)
     print ("accuracy score of {}".format(testing))
     return x, y
-
+def impute_zeros(df, column):
+    df[column] = df[column].fillna(0)
 
 def go(filename):
     df = read_data(filename)
+    df = cat_to_binary(df)
+    df = drop_columns(df)
     create_binary(df, Y_VAR)
-    feature_generation(df)
-    #leaving off right here
-
- 
-    # print (df.as_of_date)
-    # print (df.borrower_contract_reference_number)
-    # print (df.country)
-    # print (df.country, df.borrower_country_code)
-    # print (df.contract_description)
-    # print (df.contract_signing_date)
-    # print (df.major_sector)
-    # print (df.procurement_category)
-    # print (df.columns)
-
-
-
-
+    impute_zeros(df, Y_VAR)
+    print (df.columns)
+    x, y = feature_generation(df)
+    return x, y
 
 if __name__ == '__main__':
     filename = "../Example/landing.csv"
-go(filename)
-
-
-
-
-
-# def feature_importance(x, dataframe):
-
-#     features = x
-#     clf = RandomForestClassifier(compute_importances=True)
-#     clf.fit(dataframe[features], dataframe[TARGET])
-#     importances = clf.feature_importances_
-#     sorted_idx = np.argsort(importances)
-#     padding = np.arange(len(features)) + 0.5
-#     pl.barh(padding, importances[sorted_idx], align='center')
-#     pl.yticks(padding, features[sorted_idx])
-#     pl.xlabel("Relative Importance")
-#     pl.title("Variable Importance")
-#     pl.show()
+x, y = go(filename)
