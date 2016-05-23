@@ -1,7 +1,11 @@
 #!/bin/bash
 
 LOCALPATH='/home/eredmiles'
-DATA_STORAGE='/mnt/data/world-bank/pipeline_data'
+DATA_STORAGE='/mnt/data3/world-bank/pipeline_data'
+
+
+
+
 CLEANED_CONTRACTS_FILE=$DATA_STORAGE'/latest_contract_web_download_cleaned.csv'
 CANONICAL_FILE=$DATA_STORAGE'/canonicalNamesV2.csv'
 ENTITY_RESOLVED_CONTRACTS_FILE=$DATA_STORAGE'/latest_contract_web_download_cleaned_resolved.csv'
