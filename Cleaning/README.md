@@ -3,7 +3,7 @@
 1. reading.py: Read in contracts, projects, and currency conversion from World Bank Api and generate csvs. Does this need to grab the most recent files for the pipeline, or should we just read from the csvs we already have?
 
 2. summary.py: Generate summary statistics for projects, contracts, and investigations.
-	- To run the file, pass in csvs from the Data/ directory for public information or Example/ for proprietary, which is only available on our private server.
+	- To run the file, pass in csvs from the Data/ directory
 
 	```
 	python summary.py Data/contracts.csv
