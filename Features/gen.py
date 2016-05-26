@@ -37,7 +37,7 @@ def read_data(filename):
 def cat_to_binary(df):
 
     for col in DUMMY_LIST:
-        dummies = pd.get_dummies(df[col], col, drop_first=True)
+        dummies = pd.get_dummies(df[col], col)
         DROP_LIST.append(col)
         df = df.join(dummies)
     return df
@@ -80,11 +80,17 @@ def feature_generation(dataframe):
     testing = model.score(x, y)
     print ("accuracy score of {}".format(testing))
     return x, y
+
 def impute_zeros(df, column):
     df[column] = df[column].fillna(0)
 
+def drop_rows(df):
+    df = df[pd.notnull(df[Y_VAR])]
+    return df
+
 def go(filename):
     df = read_data(filename)
+    df = drop_rows(df)
     df = cat_to_binary(df)
     df = drop_columns(df)
     create_binary(df, Y_VAR)
@@ -93,5 +99,4 @@ def go(filename):
     return x, y
 
 if __name__ == '__main__':
-    filename = "../Example/landing.csv"
-x, y = go(filename)
+    # filename = "../Example/landing.csv"
