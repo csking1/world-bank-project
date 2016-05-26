@@ -89,7 +89,6 @@ def go(filename):
     df = drop_columns(df)
     create_binary(df, Y_VAR)
     impute_zeros(df, Y_VAR)
-    print (df.columns)
     x, y = feature_generation(df)
     return x, y
 
