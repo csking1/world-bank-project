@@ -9,22 +9,20 @@ from sklearn.linear_model import LogisticRegression
 DROP_LIST = ['Unnamed: 0', 'Unnamed: 0.1', 'as_of_date',
        'borrower_contract_reference_number',
        'borrower_country_code', 'contract_description',
-       'contract_signing_date', 'country', 
-       'project_id', 'project_name', 'region', 'supplier',
+       'contract_signing_date', 
+       'project_id', 'project_name', 'supplier',
        'supplier_country', 'supplier_country_code', 'wb_contract_number',
        'resolved_supplier', 'orig_supplier_name', 'year_x', 'month',
        'Country Name_x', 'Country Code_x',
        'Indicator Name_x', 'Indicator Code_x', 'year_y',
        'Country Name_y', 'Country Code_y', 'Indicator Name_y',
        'Indicator Code_y','allegation_category',
-       'outcome_val', 'wb_id', 'objective', 'competitive']
+       'outcome_val', 'wb_id']
 
-DUMMY_LIST = ['fiscal_year', 'major_sector', 'procurement_category', \
+DUMMY_LIST = ['region','fiscal_year', 'major_sector', 'procurement_category', \
 'procurement_method', 'procurement_type', 'product_line',  'country_name_standardized', \
-'ppp']
-
-BINARY = ['allegation_outcome', ]
-
+'ppp', 'country']
+BINARY_LIST = ['allegation_outcome', 'objective', 'competitive']
 Y_VAR = "allegation_outcome"
 
 def read_data(filename):
@@ -34,7 +32,7 @@ def read_data(filename):
     df = pd.read_csv(filename)
     return df
 
-def cat_to_binary(df):
+def get_dummies(df):
 
     for col in DUMMY_LIST:
         dummies = pd.get_dummies(df[col], col)
@@ -42,22 +40,16 @@ def cat_to_binary(df):
         df = df.join(dummies)
     return df
 
-def binary_helper(x):
-
-    if x == "Unsubstantiated":
-        return int(0)
-    if x == "Substantiated":
-        return int(1)
-    else:
-        return None
-
-def create_binary(df, column):
+def create_binary(df):
     '''
     Takes a df and column wtih categorical binary vaues
     Transforms into numberical binary values 0 and 1
     '''
-
-    df[column] = df[column].apply(binary_helper)
+    for column in BINARY_LIST:
+        df[column] = df[column].fillna("missing")
+        df[column] = df[column].astype('category')
+        df[column] = df[column].cat.codes
+    # df[column] = df[column].apply(binary_helper)
 
 def binning_data(dataframe, variable, bins):
 
@@ -85,18 +77,21 @@ def impute_zeros(df, column):
     df[column] = df[column].fillna(0)
 
 def drop_rows(df):
-    df = df[pd.notnull(df[Y_VAR])]
+    df = df.dropna(subset = [Y_VAR])
     return df
 
 def go(filename):
     df = read_data(filename)
     df = drop_rows(df)
-    df = cat_to_binary(df)
+    df = get_dummies(df)
     df = drop_columns(df)
-    create_binary(df, Y_VAR)
-    impute_zeros(df, Y_VAR)
+    create_binary(df)
+    print (df.columns)
+    # impute_zeros(df, Y_VAR)
     x, y = feature_generation(df)
     return x, y
 
-if __name__ == '__main__':
-    # filename = "../Example/landing.csv"
+if __name__ == "__main__":
+
+    filename = '../Example/landing.csv'
+go(filename)
