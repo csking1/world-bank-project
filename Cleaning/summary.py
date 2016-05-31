@@ -7,9 +7,10 @@ def summary(df):
 	Takes a pandas data frame, generates summary statistics, and writes out a cleaned version of the csv
 	'''
 	print ("Mode:", df.mode())
+	df_mean = df.fillna(df.mean())
+	df.to_csv("Output/contracts.csv")
 
-	# for i in range(df.shape[1]):
-	# 	print df.iloc(i)
+
 
 	# find nans and replace
 	# get correlations of columns with each other
