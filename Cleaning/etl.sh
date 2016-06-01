@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 echo Cleaning Data Sets
 
 python cleaning.py Data/contracts.csv Output/contracts.csv

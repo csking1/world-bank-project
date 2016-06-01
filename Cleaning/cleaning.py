@@ -15,11 +15,11 @@ def clean(df, outfile):
 	elif "investigations_one" in outfile:
 		for each in ["Unnamed: 35", "Unnamed: 37", "Unnamed: 38"]:
 			del new[each]
-		new = new.drop_duplicates(["Project Number"], take_last = True )
+		new = new.drop_duplicates(["Project Number"], keep = "last" )
 		new.rename(columns = {'Project Number': s}, inplace = True)
 
 	elif "investigations_two" in outfile:
-		new = new.drop_duplicates(["project_number"], take_last = True )
+		new = new.drop_duplicates(["project_number"], keep = "last" )
 		new.rename(columns = {'project_number': s}, inplace = True)
 
 	elif "resolved" in outfile:
