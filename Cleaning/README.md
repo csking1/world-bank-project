@@ -1,4 +1,4 @@
-# Steps for Cleaning and Entity Resolution
+# Cleaning and Entity Resolution
 
 Running instructions
 
