@@ -13,7 +13,7 @@ def join(contracts, projects, invest_1, invest_2, outfile):
 	print ("merging 3 / 3")
 	df = pd.merge(contracts, b, on=s)
 	print ("dropping duplicate entries")
-	df = df.drop_duplicates([s], take_last = True )
+	df = df.drop_duplicates([s], keep = "last" )
 	print ("writing to csv")
 	df.to_csv(outfile)
 
