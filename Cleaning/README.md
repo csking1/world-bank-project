@@ -1,5 +1,7 @@
 # Steps for Cleaning and Entity Resolution
 
+### Now turn all of this into a bash script
+
 1. Download public data from the World Bank API using the commands in reading.py
 
 2. Cleaning.py: This is called once for each of the contracts, projects, and investigations csvs. It writes the cleaned data to a csv in Output

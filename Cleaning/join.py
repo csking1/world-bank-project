@@ -2,12 +2,19 @@ import csv
 import pandas as pd
 import sys
 
+# fix this join, it's not turning out the right things
 
 def join(contracts, projects, invest_1, invest_2, outfile):
 	s = "Project ID"
-	print ("doing the join business")
-	# df = pd.merge(contracts,on=s).merge(projects,on=s).merge(invest_1, on=s).merge(invest_2, on=s)
-	df = pd.merge(contracts, invest_1, on=s)
+	print ("merging 1 / 3")
+	a = pd.concat([invest_1, invest_2])
+	print ("merging 2 / 3")
+	b = pd.merge(a, projects, on = s)
+	print ("mergin 3 / 3")
+	df = pd.merge(contracts, b, on=s)
+	print ("dropping duplicate entries")
+	df = df.drop_duplicates([s], take_last = True )
+	print ("writing to csv")
 	df.to_csv(outfile)
 
 if __name__ == "__main__":
