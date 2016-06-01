@@ -13,3 +13,7 @@ python -W ignore "entity_resolution.py" -c 'Output/contracts.csv' -e 'Data/names
 
 echo Joining DataFrames in Pandas
 python join.py Output/contracts_resolved.csv Output/projects.csv Output/investigations_one.csv Output/investigations_two.csv Output/resolved_joined.csv
+
+echo Cleaning the resolved and joined file
+python cleaning.py Output/resolved_joined.csv ../Example/resolved_joined.csv
+echo The file Example/resolved_joined.csv is ready for summary and feature generation

@@ -25,7 +25,7 @@ Running instructions
 4. Read in the cleaned csvs, join them using pandas, and write out one csv to send to feature generation. This file runs when Output/projects.csv and the investigations.csv use "Project ID" as the join parameter.
 
 	```
-	python join.py Output/contracts.csv Output/projects.csv Output/investigations_one.csv Output/investigations_two.csv ../Example/resolved.csv
+	python join.py Output/contracts_resolved.csv Output/projects.csv Output/investigations_one.csv Output/investigations_two.csv ../Example/resolved.csv
 	```
 
 5. Generate summary statistics on the joined csv using
