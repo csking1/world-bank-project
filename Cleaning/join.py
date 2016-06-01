@@ -11,6 +11,8 @@ def join(contracts, projects, invest_1, invest_2, outfile):
 	print ("merging 2 / 3")
 	b = pd.merge(a, projects, on = s)
 	print ("merging 3 / 3")
+
+	# maybe try a left join here?
 	df = pd.merge(contracts, b, on=s)
 	print ("dropping duplicate entries")
 	df = df.drop_duplicates([s], keep = "last" )
