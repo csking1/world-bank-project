@@ -14,12 +14,13 @@
 	python -W ignore "entity_resolution.py" -c 'Output/contracts.csv' -e 'Data/names.csv' -o '../Example/resolved.csv'
 	```
 
-4. Read in the cleaned csvs, join them using pandas, and write out one csv to send to feature generation
+4. Read in the cleaned csvs, join them using pandas, and write out one csv to send to feature generation. This file runs when Output/projects.csv and the investigations.csv use "Project ID" as the join parameter.
+
 	```
-	python join.py Output/contracts.csv Output/projects.csv Output/investigations.csv ../Example/landing.csv
+	python join.py Output/contracts.csv Output/projects.csv Output/investigations_one.csv Output/investigations_two.csv ../Example/resolved.csv
 	```
 
 5. Generate summary statistics on the joined csv using
 	```
-	python summary.py ../Example/landing.csv Output/summary.txt
+	python summary.py ../Example/resolved.csv Output/summary.txt
 	```
