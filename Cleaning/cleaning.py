@@ -15,10 +15,13 @@ def clean(df, outfile):
 		for each in ["Unnamed: 35", "Unnamed: 37", "Unnamed: 38"]:
 			del new[each]
 		new = new.drop_duplicates(["Project Number"], take_last = True )
-		print (new["Project Number"])
+		new.rename(columns = {'Project Number': s}, inplace = True)
+
 	elif "investigations_two" in outfile:
 		new = new.drop_duplicates(["project_number"], take_last = True )
-		print (new["project_number"])
+		new.rename(columns = {'project_number': s}, inplace = True)
+
+	print ("Sending csv to file")
 	new.to_csv(outfile)
 
 if __name__ == "__main__":

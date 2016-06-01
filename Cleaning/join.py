@@ -10,7 +10,7 @@ def join(contracts, projects, invest_1, invest_2, outfile):
 	a = pd.concat([invest_1, invest_2])
 	print ("merging 2 / 3")
 	b = pd.merge(a, projects, on = s)
-	print ("mergin 3 / 3")
+	print ("merging 3 / 3")
 	df = pd.merge(contracts, b, on=s)
 	print ("dropping duplicate entries")
 	df = df.drop_duplicates([s], take_last = True )
