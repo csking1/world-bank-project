@@ -11,7 +11,7 @@
 
 3. Resolve the discrepancies with entity resolution using this command and file
 	```
-	python -W ignore "entity_resolution.py" -c 'Data/contracts.csv' -e 'Data/names.csv' -o '../Example/contracts.csv'
+	python -W ignore "entity_resolution.py" -c 'Output/contracts.csv' -e 'Data/names.csv' -o '../Example/resolved.csv'
 	```
 
 4. Read in the cleaned csvs, join them using pandas, and write out one csv to send to feature generation

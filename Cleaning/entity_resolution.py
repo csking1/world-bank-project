@@ -39,7 +39,7 @@ def main():
     df_new['Canonical Name (Semantic)'] = entity_resolver['Canonical Name (Semantic)']
     entity_resolver = entity_resolver.append(df_new)
     def get_unique(x):
-        
+
         try:
             return x.unique()[0]
         except:
@@ -51,14 +51,14 @@ def main():
     entity_dict = entities.to_dict()['Canonical Name (Semantic)']
 
 
-    contracts['resolved_supplier'] = contracts['supplier'].map(entity_dict)
+    contracts['resolved_supplier'] = contracts['Supplier'].map(entity_dict)
 #    print contracts['resolved_supplier']
   #  contracts['resolved_supplier'] = contracts['resolved_supplier'].map(lambda x: str(x).replace('.', ''))
  #   contracts['resolved_supplier'] = contracts['resolved_supplier'].map(lambda x: str(x).replace(',', ''))
 #    contracts['resolved_supplier'] = contracts['resolved_supplier'].map(lambda x: str(x).replace('"', ''))
 
    # contracts['resolved_supplier']=contracts['resolved_supplier'].str.replace('\s', '')
-    contracts['orig_supplier_name'] = contracts['supplier']
+    contracts['orig_supplier_name'] = contracts['Supplier']
     print "Number of unique entities before resolution: ",contracts['orig_supplier_name'].nunique()
     print "Number of unique resolved entities: ", contracts['resolved_supplier'].nunique()
     contracts['supplier'] = contracts['resolved_supplier']
