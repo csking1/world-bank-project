@@ -10,11 +10,17 @@ def clean(df, outfile):
 	new = df.fillna(df.mode().iloc[0])
 	if "project" in outfile:
 		for each in ['projectdoc ', "majorsector_percent ", "mjsector1", "financier", "mjsector2", "mjsector3", "mjsector4", "mjsector5", "theme ", "mjtheme1name", "mjtheme2name", "mjtheme3name", "mjtheme4name", "mjtheme5name", "Unnamed: 56"]:
-			del new[each]
+			try:
+				del new[each]
+			except:
+				pass
 		new.rename(columns = {'id': s}, inplace = True)
 	elif "investigations_one" in outfile:
 		for each in ["Unnamed: 35", "Unnamed: 37", "Unnamed: 38"]:
-			del new[each]
+			try:
+				del new[each]
+			except:
+				pass
 		new = new.drop_duplicates(["Project Number"], keep = "last" )
 		new.rename(columns = {'Project Number': s}, inplace = True)
 
