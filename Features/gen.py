@@ -101,7 +101,6 @@ def go(filename):
     df = drop_columns(df)
     create_binary(df)
     binning(df)
-    print (df.columns)
     x, y = feature_generation(df)
     return x, y
 
