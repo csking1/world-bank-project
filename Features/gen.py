@@ -11,7 +11,7 @@ DROP_LIST = ['Unnamed: 0', 'Unnamed: 0.1', 'as_of_date',
        'borrower_country_code', 'contract_description',
        'contract_signing_date', 
        'project_id', 'project_name', 'supplier',
-       'supplier_country', 'supplier_country_code', 'wb_contract_number',
+       'supplier_country', 'wb_contract_number',
        'resolved_supplier', 'orig_supplier_name', 'year_x', 'month',
        'Country Name_x', 'Country Code_x',
        'Indicator Name_x', 'Indicator Code_x', 'year_y',
@@ -20,9 +20,13 @@ DROP_LIST = ['Unnamed: 0', 'Unnamed: 0.1', 'as_of_date',
        'outcome_val', 'wb_id']
 
 DUMMY_LIST = ['region','fiscal_year', 'major_sector', 'procurement_category', \
-'procurement_method', 'procurement_type', 'product_line',  'country_name_standardized', \
-'ppp', 'country']
+'procurement_method', 'procurement_type', 'product_line',  'country', 'country_name_standardized', \
+'supplier_country_code']
+
 BINARY_LIST = ['allegation_outcome', 'objective', 'competitive']
+
+BINNING_LIST = [("amount_standardized", 10), ("ppp", 20)]
+
 Y_VAR = "allegation_outcome"
 
 def read_data(filename):
@@ -51,12 +55,20 @@ def create_binary(df):
         df[column] = df[column].cat.codes
     # df[column] = df[column].apply(binary_helper)
 
-def binning_data(dataframe, variable, bins):
+def binning_helper(dataframe, variable, bins):
 
     col = "bin " + str(variable)
     dataframe[col] = pd.cut(dataframe[variable], bins=bins, \
         include_lowest=True, labels=False)
     return col
+
+def binning(dataframe):
+
+    for each in BINNING_LIST:
+        variable = each[0]
+        bins = each[1]
+        col = binning_helper(dataframe, variable, bins) 
+        dataframe[each] = dataframe[col]
 
 def drop_columns(df):
     for col in DROP_LIST:
@@ -82,12 +94,13 @@ def drop_rows(df):
 
 def go(filename):
     df = read_data(filename)
+    # print (df.columns)
+
     df = drop_rows(df)
     df = get_dummies(df)
     df = drop_columns(df)
     create_binary(df)
-    print (df.columns)
-    # impute_zeros(df, Y_VAR)
+    binning(df)
     x, y = feature_generation(df)
     return x, y
 
