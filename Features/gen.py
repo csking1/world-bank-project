@@ -6,28 +6,36 @@ from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2
 from sklearn.linear_model import LogisticRegression
 
-DROP_LIST = ['Unnamed: 0', 'Unnamed: 0.1', 'as_of_date',
-       'borrower_contract_reference_number',
-       'borrower_country_code', 'contract_description',
-       'contract_signing_date', 
-       'project_id', 'project_name', 'supplier',
-       'supplier_country', 'wb_contract_number',
-       'resolved_supplier', 'orig_supplier_name', 'year_x', 'month',
-       'Country Name_x', 'Country Code_x',
-       'Indicator Name_x', 'Indicator Code_x', 'year_y',
-       'Country Name_y', 'Country Code_y', 'Indicator Name_y',
-       'Indicator Code_y','allegation_category',
-       'outcome_val', 'wb_id']
+DROP_LIST = ['Unnamed: 0',
+       'Contract Signing Date',
+       'Total Contract Amount (USD)',
+       'Begin Appraisal Date', 'Borrower Contract Number',
+       'Procurement Method ID', 'Project Name_y', 'allegation_category',
+       'allegation_outcome', 'allegation_type', 'approval_date',
+       'bank_approval_date', 'begin_appraisal_date', 'begin_preparation_date',
+       'closing_date', 'complaint_status',
+       'concept_review_date', 'contract_amount', 'contract_sign-off_date',
+       'country', 'date_case_opened', 'date_complaint_opened',
+       'decision_meeting_date', 'effectiveness_date', 'lead_investigator',
+       'major_sector', 'no_objection_date', 'procurement_method_id',
+       'procurement_type_description', 'project_amount', 'signing_date', 'vpu',
+       'regionname', 'prodline', 'lendinginstr', 'lendinginstrtype',
+       'boardapprovaldate', 'board_approval_month', 'closingdate',
+       'lendprojectcost', 'ibrdcommamt', 'idacommamt', 'totalamt', 'grantamt',
+       'borrower', 'impagency']
 
-DUMMY_LIST = ['region','fiscal_year', 'major_sector', 'procurement_category', \
-'procurement_method', 'procurement_type', 'product_line',  'country', 'country_name_standardized', \
-'supplier_country_code']
-
-BINARY_LIST = ['allegation_outcome', 'objective', 'competitive']
+DUMMY_LIST = ['Region', 'Fiscal Year', 'Borrower Country','Borrower Country Code', 'Procurement Type', \
+'Procurement Category','Procurement Method', 'Product line', 'Major Sector_x', 'Supplier Country', \
+'Supplier Country Code', 'resolved_supplier']
+# DUMMY_LIST = ['Region', 'Fiscal Year', 'major_sector', 'procurement_category', \
+# 'procurement_method', 'procurement_type', 'product_line',  'country', 'country_name_standardized', \
+# 'supplier_country_code']
+BINARY_LIST = ['caseoutcome']
+# BINARY_LIST = ['allegation_outcome', 'objective', 'competitive']
 
 BINNING_LIST = [("amount_standardized", 10), ("ppp", 20)]
 
-Y_VAR = "allegation_outcome"
+Y_VAR = 'caseoutcome'
 
 def read_data(filename):
     '''
@@ -91,20 +99,30 @@ def impute_zeros(df, column):
 def drop_rows(df):
     df = df.dropna(subset = [Y_VAR])
     return df
+def predictor_helper(x):
+    if x == "Substantiated":
+        return int(1)
+    else:
+        return int(0)
+
+def fix_predictor(df, Y_VAR):
+    '''
+    Takes a df and column wtih categorical binary vaues
+    Transforms into numberical binary values 0 and 1
+    '''
+    df[Y_VAR] = df[Y_VAR].apply(predictor_helper)
 
 def go(filename):
     df = read_data(filename)
-    # print (df.columns)
-
-    df = drop_rows(df)
+    fix_predictor(df, Y_VAR)
+    # binning(df)
     df = get_dummies(df)
-    df = drop_columns(df)
     create_binary(df)
-    binning(df)
+
+    df = drop_columns(df)
     x, y = feature_generation(df)
     return x, y
 
-if __name__ == "__main__":
-
-    filename = '../Example/landing.csv'
-go(filename)
+# if __name__ == "__main__":
+#     filename = '../Example/resolved_joined.csv'
+# go(filename)
