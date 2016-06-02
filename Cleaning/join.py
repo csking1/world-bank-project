@@ -14,6 +14,7 @@ def join(contracts, projects, invest_1, invest_2, outfile):
 
 	# maybe try a left join here?
 	df = pd.merge(contracts, b, on=s)
+
 	print ("dropping duplicate entries")
 	df = df.drop_duplicates([s], keep = "last" )
 	print ("writing to csv")
