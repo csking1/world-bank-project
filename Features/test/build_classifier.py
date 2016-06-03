@@ -3,7 +3,7 @@ from __future__ import division
 import pandas as pd
 import numpy as np
 from preprocess_data import update_with_cc_means
-# from generate_features import cat_to_binary
+from generate_features import cat_to_binary
 from sklearn import preprocessing, cross_validation, svm, metrics, tree, decomposition, svm
 from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier, GradientBoostingClassifier, AdaBoostClassifier
 from sklearn.linear_model import LogisticRegression, Perceptron, SGDClassifier, OrthogonalMatchingPursuit, RandomizedLogisticRegression
@@ -22,9 +22,6 @@ import matplotlib.pyplot as plt
 from scipy import optimize
 import time
 import csv
-# import sys
-# sys.path.insert(0, '..')
-# import gen
 print("imports done!")
 
 def format_for_models(data, response, predictor):
@@ -59,13 +56,13 @@ def define_clfs_params():
 
     grid = { 
     'RF':{'n_estimators': [1,10,100,1000,10000], 'max_depth': [1,5,10,20,50,100], 'max_features': ['sqrt','log2'],'min_samples_split': [2,5,10]},
-    'LR': { 'penalty': ['l1','l2'], 'C': [0.00001,0.0001,0.001]}, #,0.01,0.1,1,10
+    'LR': { 'penalty': ['l1','l2'], 'C': [0.00001,0.0001,0.001,0.01,0.1,1,10]},
     'SGD': { 'loss': ['hinge','log','perceptron'], 'penalty': ['l2','l1','elasticnet']},
     'ET': { 'n_estimators': [1,10,100,1000,10000], 'criterion' : ['gini', 'entropy'] ,'max_depth': [1,5,10,20,50,100], 'max_features': ['sqrt','log2'],'min_samples_split': [2,5,10]},
     'AB': { 'algorithm': ['SAMME', 'SAMME.R'], 'n_estimators': [1,10,100,1000,10000]},
-    'GB': {'n_estimators': [1,10,100,1000,10000], 'learning_rate' : [0.001,0.01,0.05,0.1,0.5],'subsample' : [0.1,0.5,1.0], 'max_depth': [1,3,5,10,20,50,100]}, #,20,50,100
+    'GB': {'n_estimators': [1,10,100,1000,10000], 'learning_rate' : [0.001,0.01,0.05,0.1,0.5],'subsample' : [0.1,0.5,1.0], 'max_depth': [1,3,5,10,20,50,100]},
     'NB' : {},
-    'DT': {'criterion': ['gini', 'entropy'], 'max_depth': [1,5,10], 'max_features': ['sqrt','log2'],'min_samples_split': [2,5,10]},
+    'DT': {'criterion': ['gini', 'entropy'], 'max_depth': [1,5,10,20,50,100], 'max_features': ['sqrt','log2'],'min_samples_split': [2,5,10]},
     'SVM' :{'C' :[0.00001,0.0001,0.001,0.01,0.1,1,10],'kernel':['linear']},
     'KNN' :{'n_neighbors': [1,5,10,25,50,100],'weights': ['uniform','distance'],'algorithm': ['auto','ball_tree','kd_tree']}
            }
@@ -73,7 +70,7 @@ def define_clfs_params():
     return clfs, grid
 
 
-def magic_loop(models_to_run, clfs, params, X, y, Ks=[0.1, 0.5, 0.9]):
+def magic_loop(models_to_run, clfs, params, X, y, Ks=[0.05, 0.1]):
     ''' 
     X and y need to be formatted
     '''
@@ -85,7 +82,7 @@ def magic_loop(models_to_run, clfs, params, X, y, Ks=[0.1, 0.5, 0.9]):
 
     for n in range(1, 2):
         # print("split: {}".format(n))
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5, random_state=0)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
         for index,clf in enumerate([clfs[x] for x in models_to_run]):
             # print(models_to_run[index])
             parameter_values = params[models_to_run[index]]
@@ -94,10 +91,10 @@ def magic_loop(models_to_run, clfs, params, X, y, Ks=[0.1, 0.5, 0.9]):
                     # d = {}
                     # print("parameters {}".format(p))
                     clf.set_params(**p)
-                    # clf.fit(X_train, y_train)
-                    y_pred_probs = clf.fit(X_train, y_train).predict_proba(X_test)[:,1]
+                    clf.fit(X_train, y_train)
+                    
 
-                    # y_pred_probs = clf.predict_proba(X_test)[:,1]
+                    y_pred_probs = clf.predict_proba(X_test)[:,1]
                     
 
                     row=[models_to_run[index], p, n, roc_auc_score(y_test, y_pred_probs)]
@@ -106,17 +103,10 @@ def magic_loop(models_to_run, clfs, params, X, y, Ks=[0.1, 0.5, 0.9]):
                         y_pred = np.asarray([1 if i >= threshold else 0 for i in y_pred_probs])
 
                         score_list = []
-                        score_list.append(metrics.accuracy_score(y_test, y_pred))
-                        score_list.append(metrics.recall_score(y_test, y_pred))
-                        score_list.append(metrics.f1_score(y_test, y_pred))
+                        score_list.append(clf.score(X_test, y_pred))
+                        score_list.append(recall_score(y_test, y_pred))
+                        score_list.append(f1_score(y_test, y_pred))
                         score_list.append(metrics.precision_score(y_test, y_pred))
-                        for i in range(20):
-                            print('real: {}; prob: {}'.format(y_test[i], y_pred_probs[i]))
-                        # print(y_pred_probs)
-                        # print()
-                        # for i in y_test:
-                        #     print(i)
-                        # print(y_test)
 
                         row += score_list #evaluate_models_at_k(y_pred, X_test, y_test, k)
                     # plot_precision_recall_n(y_test, y_pred_probs, clf)
@@ -180,66 +170,59 @@ def plot_precision_recall_n(y_true, y_prob, model_name):
     #plt.savefig(name)
     plt.show()
 
-# get_summary not working
-def get_summary(model_df, n=1):
-    '''
-    gives top n values from model df in each column
-    makes dataframe to outpur to csv
-    '''
-    l_indices = []
-    rv_list = []
-    if n == 1:
-        for col in model_df.columns.values[2:]:
-            c = model_df[col]
-            # print(c)
-            # print(type(c))
-            a = c[3:].idxmax()
-            # print(col, a, model_df.ix[a][col])
-            # print(model_df.ix[a])
-            l_indices.append(a)
-            # for i in a:
-        for i in l_indices:
-            rv_list.append(list(model_df.ix[i]))
-            # b = model_df.ix[a]
-            # rv_df.append(b)
-    else:
-        for col in model_df.columns.values:
-            for i in range(n):
-                # print(type(model_df))
-                # print(model_df[col])
-                temp = model_df.sort(col, ascending=False)
-                rv_list.append(temp.ix[i])
-
-            # print() #[:n]
-            # rv_df.append(model_df.sort(col, ascending=False)[:n])
-    rv = pd.DataFrame(rv_list)
-    rv.columns = model_df.ix[0]
-    return rv
+#get_summary not working
+# def get_summary(model_df, n=3):
+#     '''
+#     gives top n values from model df in each column
+#     makes dataframe to outpur to csv
+#     '''
+#     l_indices = []
+#     rv_list = []
+#     if n == 1:
+#         for col in model_df.columns.values[3:]:
+#             c = model_df[col]
+#             # print(c)
+#             # print(type(c))
+#             a = c[1:].idxmax()
+#             print(col, a, model_df.ix[a][col])
+#             # print(model_df.ix[a])
+#             l_indices.append(a)
+#             # for i in a:
+#         for i in l_indices:
+#             rv_list.append(list(model_df.ix[i]))
+#             # b = model_df.ix[a]
+#             # rv_df.append(b)
+#     else:
+#         for col in model_df.columns.values[7:]:
+#             for i in range(n):
+#                 print(type(model_df))
+#                 print(model_df[col])
+#                 temp = model_df.sort(col, ascending=False)
+#                 rv_list.append(temp.ix[i])
+#             # print() #[:n]
+#             # rv_df.append(model_df.sort(col, ascending=False)[:n])
+#     return pd.DataFrame(rv_list)
 
 def main(data_filename, response, output_filename, summary_filename): 
-    # X, y = gen.go(data_filename)
     clfs, grid = define_clfs_params()
-    # models_to_run = ['SVM', 'SGD', 'KNN','LR', 'RF', 'ET','AB','GB','NB','DT'] 
-    models_to_run = ['LR', 'NB'] # 'DT' 
+    # models_to_run = ['SVM', 'SGD', 'KNN','LR', 'RF', 'ET','AB','GB','NB','DT']
+    models_to_run = ['LR', 'NB', 'DT'] 
     data = pd.read_csv(data_filename)
     print("data read")
-    data = update_with_cc_means(data, response) #data.head(100)
+    # data = update_with_cc_means(data, response) #data.head(100)
     print("I'm imputing wrong but yolo")
     # data = cat_to_binary(data, response)
     X, y = format_for_models(data, response, list(data.columns.values))
     print("formatted; running loop...")
-    # print(X.head(10))
     model_list = magic_loop(models_to_run,clfs,grid,X,y)
     print("Loop Done! saving...")
     model_df = pd.DataFrame(model_list)
     # model_df.to_csv(output_filename)
     print("getting summary...")
-    summary = get_summary(model_df)
-    print(summary)
-    summary.to_csv(summary_filename)
+    # summary = get_summary(model_df)
+    # print(summary)
+    # summary.to_csv(summary_filename)
     print("Done!")
-
-
     # print(model_list)
     # with open(output_filename, 'w') as f:
     #     w = csv.writer(f)
@@ -251,11 +234,7 @@ def main(data_filename, response, output_filename, summary_filename):
     #     for line in summary:
     #         w.writerow(line)
 
-# if __name__ == "__main__":
-#     main('../Example/landing.csv', 'allegation_outcome',
-#     'test/magic_loop_full_WB_test.csv', 'test/magic_loop_summary_WB_test.csv')
-
 if __name__ == "__main__":
-    main('cs-training.csv', 'SeriousDlqin2yrs', 'loop_full.csv', 'loop_summary.csv')
-
+    main('data/landing.csv', 'allegation_outcome',
+    'output/magic_loop_full_WB_test.csv', 'output/magic_loop_summary_WB_test.csv')
 
