@@ -6,7 +6,7 @@
 import gen
 import csv
 import pandas as pd
-import explore_clean as exp
+#import explore_clean as exp
 import numpy as np
 from sklearn import preprocessing, cross_validation, metrics, tree, decomposition, svm
 from sklearn.cross_validation import train_test_split
@@ -17,11 +17,11 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import *
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import time as t
 
-MODELS = ['LR', 'DT']
-# MODELS = ['LR','DT', 'KNN', 'RF', 'NB', 'GB', 'AB', 'BG']
+# MODELS = ['LR', 'DT', 'RF']
+MODELS = ['LR','DT', 'KNN', 'RF', 'NB', 'GB', 'AB', 'BG']
 
 clfs = {'RF': RandomForestClassifier(n_estimators=50, n_jobs=-1),
         'ET': ExtraTreesClassifier(n_estimators=10, n_jobs=-1, criterion='entropy'),
@@ -91,7 +91,10 @@ def magic_loop(x, y):
                         end_time = t.time()
                         total_time = end_time - start_time
                         w.writerow([current_model, p, precision, recall, AUC, f1, accuracy, total_time])
-               
+                        
+                        print(current_model)
+                        print(p)
+                        
                         if AUC > class_auc[current_model]:
                             class_auc[current_model] = AUC
                             cls_ypred = y_pred_probs
@@ -155,8 +158,9 @@ def plot_precision_recall_n(y_true, y_scores, model_name):
 
 def go():
 
-    filename = '../Example/resolved_joined.csv'
+    filename = '../../Example/resolved_joined.csv'
     x, y = gen.go(filename)
+    print(len(x.columns))
     magic_loop(x, y)
 
 if __name__ == '__main__':

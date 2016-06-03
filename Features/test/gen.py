@@ -80,7 +80,11 @@ def binning(dataframe):
 
 def drop_columns(df):
     for col in DROP_LIST:
-        df = df.drop(col, axis=1)
+        try:
+            df = df.drop(col, axis=1)
+        except:
+            print(col)
+            continue
     return df
 
 def feature_generation(dataframe):
@@ -115,7 +119,7 @@ def fix_predictor(df, Y_VAR):
 def go(filename):
     df = read_data(filename)
     fix_predictor(df, Y_VAR)
-    # binning(df)
+    #binning(df)
     df = get_dummies(df)
     create_binary(df)
 
@@ -123,6 +127,6 @@ def go(filename):
     x, y = feature_generation(df)
     return x, y
 
-# if __name__ == "__main__":
-#     filename = '../Example/resolved_joined.csv'
-# go(filename)
+#if __name__ == "__main__":
+#    filename = '../../Example/resolved_joined.csv'
+#go(filename)
