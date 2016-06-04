@@ -6,7 +6,6 @@
 import gen
 import csv
 import pandas as pd
-import explore_clean as exp
 import numpy as np
 from sklearn import preprocessing, cross_validation, metrics, tree, decomposition, svm
 from sklearn.cross_validation import train_test_split

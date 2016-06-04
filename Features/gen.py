@@ -10,11 +10,9 @@ DROP_LIST = ['Unnamed: 0',
        'Contract Signing Date',
        'Total Contract Amount (USD)',
        'Begin Appraisal Date', 'Borrower Contract Number',
-       'Procurement Method ID', 'Project Name_y', 'allegation_category',
-       'allegation_outcome', 'allegation_type', 'approval_date',
-       'bank_approval_date', 'begin_appraisal_date', 'begin_preparation_date',
-       'closing_date', 'complaint_status',
-       'concept_review_date', 'contract_amount', 'contract_sign-off_date',
+       'Procurement Method ID', 'Project Name_y',
+       'approval_date','bank_approval_date', 'begin_appraisal_date', 'begin_preparation_date',
+       'closing_date','concept_review_date', 'contract_sign-off_date',
        'country', 'date_case_opened', 'date_complaint_opened',
        'decision_meeting_date', 'effectiveness_date', 'lead_investigator',
        'major_sector', 'no_objection_date', 'procurement_method_id',
@@ -26,15 +24,12 @@ DROP_LIST = ['Unnamed: 0',
 
 DUMMY_LIST = ['Region', 'Fiscal Year', 'Borrower Country','Borrower Country Code', 'Procurement Type', \
 'Procurement Category','Procurement Method', 'Product line', 'Major Sector_x', 'Supplier Country', \
-'Supplier Country Code', 'resolved_supplier']
-# DUMMY_LIST = ['Region', 'Fiscal Year', 'major_sector', 'procurement_category', \
-# 'procurement_method', 'procurement_type', 'product_line',  'country', 'country_name_standardized', \
-# 'supplier_country_code']
+'Supplier Country Code', 'resolved_supplier', 'allegation_category',  'allegation_outcome', 'allegation_type', \
+'complaint_status']
+LOG_LIST = ['contract_amount']
+
 BINARY_LIST = ['caseoutcome'] 
-# BINARY_LIST = ['allegation_outcome', 'objective', 'competitive']
-
-BINNING_LIST = [("amount_standardized", 10), ("ppp", 20)]
-
+# BINNING_LIST = [('contract_amount', 50)]
 Y_VAR = 'caseoutcome'
 
 def read_data(filename):
@@ -82,6 +77,12 @@ def drop_columns(df):
     for col in DROP_LIST:
         df = df.drop(col, axis=1)
     return df
+def get_log(df):
+
+    for col in LOG_LIST:
+        log_col = 'log_' + str(col)
+        df[log_col] = df[col].apply(lambda x: np.log(x + 1))
+    # return log_col
 
 def feature_generation(dataframe):
     y = dataframe[Y_VAR]
@@ -114,15 +115,17 @@ def fix_predictor(df, Y_VAR):
 
 def go(filename):
     df = read_data(filename)
+    # print (df['contract_amount'])
     fix_predictor(df, Y_VAR)
     # binning(df)
     df = get_dummies(df)
     create_binary(df)
-
     df = drop_columns(df)
+    get_log(df)
+    # print (df.columns)
     x, y = feature_generation(df)
     return x, y
 
-# if __name__ == "__main__":
-#     filename = '../Example/resolved_joined.csv'
-# go(filename)
+if __name__ == "__main__":
+    filename = '../Example/resolved_joined.csv'
+go(filename)
