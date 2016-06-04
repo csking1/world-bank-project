@@ -7,24 +7,22 @@ from sklearn.feature_selection import chi2
 from sklearn.linear_model import LogisticRegression
 
 ##Binning: WTF is going on with my function?
-#procurement_method_id: If time, sort into Objective, subjective
+#Pr: If time, sort into Objective, subjective
 
 DROP_LIST = ['Unnamed: 0','Contract Signing Date','Total Contract Amount (USD)','Begin Appraisal Date',
        'Borrower Contract Number','Procurement Method ID', 'Project Name_y','approval_date',
        'bank_approval_date', 'begin_appraisal_date', 'begin_preparation_date',
        'closing_date','concept_review_date', 'contract_sign-off_date', 
        'date_case_opened', 'date_complaint_opened','decision_meeting_date', 'effectiveness_date',
-       'no_objection_date','procurement_type_description', 'signing_date', 'vpu',
-       'regionname', 'prodline', 'lendinginstr', 'lendinginstrtype','boardapprovaldate', 'board_approval_month', 'closingdate',
-       'lendprojectcost', 'ibrdcommamt', 'idacommamt', 'totalamt', 'grantamt','borrower', 'impagency']
+       'no_objection_date','procurement_type_description', 'signing_date','boardapprovaldate', 'closingdate',
+       'lendprojectcost', 'ibrdcommamt', 'idacommamt', 'totalamt', 'grantamt']
 
 DUMMY_LIST = ['Region', 'Fiscal Year', 'Borrower Country','Borrower Country Code', 'Procurement Type', \
 'Procurement Category','Procurement Method', 'Product line', 'Major Sector_x', 'Supplier Country', \
 'Supplier Country Code', 'resolved_supplier', 'allegation_category',  'allegation_outcome', 'allegation_type', \
-'complaint_status','country', 'lead_investigator', 'major_sector', 'procurement_method_id']
-
+'complaint_status','country', 'lead_investigator', 'major_sector', 'procurement_method_id', 'regionname', 'vpu', 'prodline', 
+'lendinginstr', 'lendinginstrtype','board_approval_month', 'borrower',  'impagency']
 LOG_LIST = ['contract_amount']
-
 BINARY_LIST = ['caseoutcome', 'project_amount'] 
 BINNING_LIST = [('project_amount', 100)]
 Y_VAR = 'caseoutcome'
@@ -115,8 +113,8 @@ def fix_predictor(df, Y_VAR):
 
 def go(filename):
     df = read_data(filename)
-    print (df['procurement_method_id'].unique())
     df = df.convert_objects(convert_numeric=True)
+    print (df['date_case_opened'].unique())
     fix_predictor(df, Y_VAR)
     df = get_dummies(df)
     create_binary(df)
