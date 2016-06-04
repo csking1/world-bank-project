@@ -17,11 +17,13 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import *
-#import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
 import time as t
 
 # MODELS = ['LR', 'DT', 'RF']
-MODELS = ['LR','DT', 'KNN', 'RF', 'NB', 'GB', 'AB', 'BG']
+MODELS = ['LR', 'DT', 'KNN', 'RF', 'NB', 'GB', 'AB', 'BG']
 
 clfs = {'RF': RandomForestClassifier(n_estimators=50, n_jobs=-1),
         'ET': ExtraTreesClassifier(n_estimators=10, n_jobs=-1, criterion='entropy'),
@@ -50,13 +52,13 @@ grid = {
 
 def magic_loop(x, y):
     
-
+    best_dict = {}
     cls_d = {}
 
-    with open('models.csv', 'w', newline='') as csvfile:
+    with open('models.csv', 'w') as csvfile:
         w = csv.writer(csvfile, delimiter=',')
         w.writerow(['MODEL', 'PARAMETERS', 'PRECISION', 'RECALL', 'AUC', 'F1', 'ACCURACY', 'Time'])
-        with open('best_models.csv', 'w', newline='') as csvfile:
+        with open('best_models.csv', 'w') as csvfile:
             c = csv.writer(csvfile, delimiter=',')
             c.writerow(['MODEL', 'PARAMETERS', 'PRECISION', 'RECALL', 'AUC', 'F1', 'ACCURACY', 'Time'])
             x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=0)
@@ -104,14 +106,33 @@ def magic_loop(x, y):
                             cls_f1 = f1
                             cls_accuracy = accuracy
                             cls_time = total_time
-                   
+                            best_dict[current_model] = p
+
                     except IndexError as e:
                         continue
 
                 auc = class_auc[current_model]
                 c.writerow([current_model, cls_param, cls_precision, cls_recall, auc, cls_f1, cls_accuracy, cls_time])
                 cls_d[current_model] = [auc, cls_ypred]
-                # plot_precision_recall_n(y_test, cls_ypred, current_model)
+                plot_precision_recall_n(y_test, cls_ypred, current_model)
+                plot_precision_recall_n_original(y_test, cls_ypred, current_model)
+    return best_dict
+
+
+def cross_validation(best_dict, x, y, num_splits = 5, ts = 0.2):
+    for model in best_dict:
+        with open('Eval/{}.csv'.format(model), 'w') as f:
+            w = csv.writer(csvfile, delimiter=',')
+            w.writerow(['MODEL', 'PARAMETERS', 'PRECISION', 'RECALL', 'AUC', 'F1', 'ACCURACY', 'SPLIT'])
+            for split in range(num_splits):
+                x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=ts, random_state=5)
+                clf.set_params(**p)
+                y_pred_probs = clf.fit(x_train, y_train).predict_proba(x_test)[:,1]
+                precision, accuracy, recall, f1, threshold, AUC = model_evaluation(y_test, y_pred_probs, .05)
+                w.writerow([current_model, p, precision, recall, AUC, f1, accuracy, split])
+            
+
+
 
 def model_evaluation(y_true, y_scores, k):
     
@@ -125,8 +146,44 @@ def model_evaluation(y_true, y_scores, k):
 
     return precision, accuracy, recall, f1, threshold, AUC
 
+def plot_precision_recall_n(y_true, y_prob, model_name):
+    '''
+    Takes the model, plots precision and recall curves
+    '''
+    y_score = y_prob
+    precision_curve, recall_curve, pr_thresholds = precision_recall_curve(y_true, y_score)
+    precision_curve = precision_curve[:-1]
+    recall_curve = recall_curve[:-1]
+    pct_above_per_thresh = []
+    number_scored = len(y_score)
 
-def plot_precision_recall_n(y_true, y_scores, model_name):
+    for value in pr_thresholds:
+        num_above_thresh = len(y_score[y_score >= value])
+        pct_above_thresh = num_above_thresh / float(number_scored)
+        pct_above_per_thresh.append(pct_above_thresh)
+
+    pct_above_per_thresh = np.array(pct_above_per_thresh)
+    plt.clf()
+    fig, ax1 = plt.subplots()
+    ax1.plot(pct_above_per_thresh, precision_curve, 'b')
+    ax1.set_xlabel('percent of population')
+    ax1.set_ylabel('precision', color='b')
+    ax2 = ax1.twinx()
+    ax2.plot(pct_above_per_thresh, recall_curve, 'r')
+    ax2.set_ylabel('recall', color='r')
+    
+    name = str(model_name)
+    try:
+        plt.title(name)
+        plt.savefig("Output/{}.png".format(name))
+    except:
+        name = name[:75]
+        plt.title(name)
+        plt.savefig("Output/{}.png".format(name))
+    plt.close()
+
+
+def plot_precision_recall_n_original(y_true, y_scores, model_name):
     '''
     Takes the model, plots precision and recall curves
     '''
@@ -154,14 +211,15 @@ def plot_precision_recall_n(y_true, y_scores, model_name):
     name = model_name
     plt.title(name)
     plt.savefig("Eval/{}.png".format(name))
-    # plt.show()
+    #plt.show()
 
 def go():
 
     filename = '../../Example/resolved_joined.csv'
     x, y = gen.go(filename)
     print(len(x.columns))
-    magic_loop(x, y)
+    best_dict = magic_loop(x, y)
+    #cross_validation(best_dict, x, y, 5, 0.02)
 
 if __name__ == '__main__':
 
