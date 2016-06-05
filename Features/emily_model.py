@@ -75,7 +75,7 @@ def magic_loop(models_to_run, clfs, grid, X, y):
             for p in ParameterGrid(grid[models_to_run[index]]):
                 try:
                     clf.set_params(**p)
-                    # print (clf)
+                    print (clf)
                     y_pred_probs = clf.fit(X_train, y_train).predict_proba(X_test)[:,1]
                     plot_precision_recall_n(y_test, y_pred_probs, clf)
                     l = scoring(k, y_test, y_pred_probs)
@@ -177,7 +177,7 @@ def main(filename):
     '''
     clfs, grid = define_clfs_params()
     # models_to_run = ['LR','ET','AB','GB','NB','DT', 'KNN','RF']
-    models_to_run = ['NB', "ET", "AB", "GB", "DT", "KNN", "RF"]
+    models_to_run = ["AB", "GB", "DT", "KNN", "RF"]
     # X, y = get_x_and_y(filename)
     X, y = gen.go('../Example/resolved_joined.csv')
     top =  magic_loop(models_to_run, clfs, grid, X, y)
