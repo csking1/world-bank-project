@@ -1,0 +1,21 @@
+Top Ten AUC Classifiers 
+
+AUC: 0 from  
+
+AUC: 0 from  
+
+AUC: 0 from  
+
+AUC: 0 from  
+
+AUC: 0 from  
+
+AUC: 0 from  
+
+AUC: 0.690298507463 from GaussianNB()
+
+AUC: 0 from  
+
+AUC: 0 from  
+
+AUC: 0 from  

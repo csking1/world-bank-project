@@ -10,7 +10,7 @@ from sklearn.linear_model import LogisticRegression
 #Pr: If time, sort into Objective, subjective
 
 DROP_LIST = ['Unnamed: 0','Contract Signing Date','Total Contract Amount (USD)','Begin Appraisal Date',
-       'Borrower Contract Number','Procurement Method ID', 'Project Name_y','approval_date',
+       'Borrower Contract Number', 'Project Name_y','approval_date',
        'bank_approval_date', 'begin_appraisal_date', 'begin_preparation_date',
        'closing_date','concept_review_date', 'contract_sign-off_date', 
        'date_case_opened', 'date_complaint_opened','decision_meeting_date', 'effectiveness_date',

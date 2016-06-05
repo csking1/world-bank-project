@@ -13,7 +13,10 @@ from sklearn.grid_search import ParameterGrid
 from sklearn.metrics import *
 from sklearn.preprocessing import StandardScaler
 import random
-import pylab as pl
+#import pylab as pl
+import matplotlib
+matplotlib.use('Agg')
+
 import matplotlib.pyplot as plt
 plt.style.use('ggplot')
 from scipy import optimize
