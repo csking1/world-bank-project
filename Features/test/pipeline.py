@@ -23,7 +23,7 @@ import matplotlib.pyplot as plt
 import time as t
 
 # MODELS = ['LR', 'DT', 'RF']
-MODELS =['LR', 'DT', 'KNN', 'RF', 'NB', 'GB', 'AB', 'BG']
+MODELS = ['LR']#['LR', 'DT', 'KNN', 'RF', 'NB', 'GB', 'AB', 'BG']
 
 clfs = {'RF': RandomForestClassifier(n_estimators=50, n_jobs=-1),
         'ET': ExtraTreesClassifier(n_estimators=10, n_jobs=-1, criterion='entropy'),
