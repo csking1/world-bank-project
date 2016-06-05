@@ -1,0 +1,973 @@
+================= Running test at 2016-06-05 10:02:32.833062 ====================
+['02/12/2014' '03/04/2013' '11/07/2014' '06/17/2013' '12/18/2012'
+ '11/27/2012' '01/16/2015' '05/01/2013' '10/25/2012' '06/09/2014'
+ '04/10/2013' '11/25/2014' '01/20/2015' '02/10/2014' '05/14/2015'
+ '05/05/2014' '02/04/2014' '11/24/2014' '05/26/2015' '04/08/2015'
+ '09/30/2014' '11/28/2012' '01/14/2014' '06/19/2013' '05/07/2013'
+ '06/10/2014' '09/26/2014' '05/02/2013' '12/13/2012' '08/26/2013'
+ '03/25/2013' '09/25/2014' '05/06/2013' '03/19/2013' '10/19/2012'
+ '07/25/2014' '11/14/2014' '06/17/2015' '01/21/2015' '02/07/2013'
+ '11/26/2012' '06/29/2015' '09/29/2014' '12/03/2014' '04/02/2014'
+ '11/12/2013' '03/26/2015' '12/10/2014' '03/20/2013' '12/06/2012'
+ '04/08/2013' '12/11/2012' '11/29/2012' '11/11/2014' '03/05/2013'
+ '10/01/2014' '05/16/2013' '03/10/2014' '06/18/2015' '05/07/2014'
+ '11/30/2014' '06/30/2015' '09/27/2012' '05/02/2014' '01/23/2015'
+ '04/22/2014' '12/11/2013' '04/29/2014' '03/20/2015' '11/10/2014'
+ '10/18/2012' '03/12/2014' '01/08/2014' '04/07/2015' '07/29/2013'
+ '04/28/2014' '12/02/2014' '03/18/2014' '07/22/2014' '03/30/2015'
+ '06/25/2015' '06/10/2015']
+accuracy score of 0.997375328084
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.5
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.542156862745
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.80931372549
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.780392156863
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.804901960784
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.495588235294
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.769607843137
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.771078431373
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.824509803922
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.806862745098
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.5
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.811274509804
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.785294117647
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.811764705882
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.81568627451
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.81862745098
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.825980392157
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.85
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.811764705882
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.807352941176
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.821568627451
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.812745098039
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.836274509804
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.874019607843
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.813725490196
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.872549019608
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.817647058824
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.827450980392
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.850980392157
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.822549019608
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.839215686275
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.862745098039
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.836274509804
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.827450980392
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.862745098039
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.829411764706
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.832352941176
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.846078431373
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.837254901961
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.862745098039
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.857843137255
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.855882352941
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.858823529412
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.852941176471
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.859803921569
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.873529411765
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.856862745098
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.911274509804
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.878431372549
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.86568627451
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.866666666667
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.882352941176
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.867647058824
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+switching out 0.887254901961
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)

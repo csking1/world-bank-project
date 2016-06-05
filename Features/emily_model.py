@@ -64,6 +64,7 @@ def magic_loop(models_to_run, clfs, grid, X, y):
     Takes a list of models to use, two dictionaries of classifiers and parameters, and array of X
     '''
     table = {}
+    count = 0
     top = []
     for i in range(10):
         top.append((0, " "))
@@ -76,8 +77,9 @@ def magic_loop(models_to_run, clfs, grid, X, y):
                 try:
                     clf.set_params(**p)
                     print (clf)
-                    y_pred_probs = clf.fit(X_train, y_train).predict_proba(X_test)[:,1]
-                    plot_precision_recall_n(y_test, y_pred_probs, clf)
+                    count += 1
+		    y_pred_probs = clf.fit(X_train, y_train).predict_proba(X_test)[:,1]
+                    plot_precision_recall_n(y_test, y_pred_probs, clf, count)
                     l = scoring(k, y_test, y_pred_probs)
                     m, s = top[0]
                     auc = l['auc']
@@ -108,7 +110,7 @@ def scoring(k, y_test, y_pred_probs):
 
     return l
 
-def plot_precision_recall_n(y_true, y_prob, model_name):
+def plot_precision_recall_n(y_true, y_prob, model_name, count):
     '''
     Takes the model, plots precision and recall curves
     '''
@@ -139,7 +141,7 @@ def plot_precision_recall_n(y_true, y_prob, model_name):
     name = str(model_name)
     try:
         plt.title(name)
-        plt.savefig("Output/Images/{}.png".format(name))
+        plt.savefig("Output/Images/{}.png".format(count))
     except:
         name = name[:15]
         plt.title(name)

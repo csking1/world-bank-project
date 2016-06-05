@@ -1,21 +1,61 @@
 Top Ten AUC Classifiers 
 
-AUC: 0 from  
+AUC: 0.86568627451 from RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
 
-AUC: 0 from  
+AUC: 0.866666666667 from RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
 
-AUC: 0 from  
+AUC: 0.872549019608 from RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
 
-AUC: 0 from  
+AUC: 0.878431372549 from RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
 
-AUC: 0 from  
+AUC: 0.867647058824 from RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
 
-AUC: 0 from  
+AUC: 0.911274509804 from RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
 
-AUC: 0.690298507463 from GaussianNB()
+AUC: 0.873529411765 from RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
 
-AUC: 0 from  
+AUC: 0.882352941176 from RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
 
-AUC: 0 from  
+AUC: 0.887254901961 from RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
 
-AUC: 0 from  
+AUC: 0.874019607843 from RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
