@@ -46,8 +46,8 @@ def define_clfs_params():
         'KNN': KNeighborsClassifier(n_neighbors=3)
             }
     grid = {
-    'RF':{'n_estimators': [1,10, 100], 'max_depth': [1,5,10], 'max_features': ['log2'],'min_samples_split': [5,10]},
-    # 'RF':{'n_estimators': [1,10,100,1000,10000], 'max_depth': [1,5,10,20,50,100], 'max_features': ['sqrt','log2'],'min_samples_split': [2,5,10]},
+    # 'RF':{'n_estimators': [1,10, 100], 'max_depth': [1,5,10], 'max_features': ['log2'],'min_samples_split': [5,10]},
+    'RF':{'n_estimators': [1,10,100,1000,10000], 'max_depth': [1,5,10,20,50,100], 'max_features': ['sqrt','log2'],'min_samples_split': [2,5,10]},
     'LR': { 'penalty': ['l1','l2'], 'C': [0.00001,0.0001,0.001,0.01,0.1,1,10]},
     'SGD': { 'loss': ['hinge','log','perceptron'], 'penalty': ['l2','l1','elasticnet']},
     'ET': { 'n_estimators': [1,10,100,1000,10000], 'criterion' : ['gini', 'entropy'] ,'max_depth': [1,5,10,20,50,100], 'max_features': ['sqrt','log2'],'min_samples_split': [2,5,10]},
@@ -67,6 +67,7 @@ def magic_loop(models_to_run, clfs, grid, X, y):
     '''
     table = {}
     top = []
+    count = 0
     for i in range(10):
         top.append((0, " "))
     heapq.heapify(top)
@@ -79,14 +80,14 @@ def magic_loop(models_to_run, clfs, grid, X, y):
                     clf.set_params(**p)
                     print (clf)
                     y_pred_probs = clf.fit(X_train, y_train).predict_proba(X_test)[:,1]
-                    plot_precision_recall_n(y_test, y_pred_probs, clf)
+                    plot_precision_recall_n(y_test, y_pred_probs, clf, count)
+                    count += 1
                     l = scoring(k, y_test, y_pred_probs)
                     m, s = top[0]
                     auc = l['auc']
                     if auc > m:
                         print ("switching out {}".format(auc))
                         heapq.heapreplace(top, (auc, clf))
-
                 except:
                     print ('Error:')
                     continue
@@ -102,15 +103,9 @@ def scoring(k, y_test, y_pred_probs):
     l['fpr'] = fpr
     l['tpr'] = tpr
     l['auc'] = metrics.auc(fpr, tpr)
-    # try:
-
-    #     l['accuracy'] = metrics.accuracy_score(y_test, y_scores)
-    # except:
-    #     print ("Couldn't get result metrics here")
-
     return l
 
-def plot_precision_recall_n(y_true, y_prob, model_name):
+def plot_precision_recall_n(y_true, y_prob, model_name, count):
     '''
     Takes the model, plots precision and recall curves
     '''
@@ -141,11 +136,11 @@ def plot_precision_recall_n(y_true, y_prob, model_name):
     name = str(model_name)
     try:
         plt.title(name)
-        plt.savefig("Output/Images/{}.png".format(name))
+        plt.savefig("Output/Images/{}.png".format(count))
     except:
         name = name[:15]
         plt.title(name)
-        plt.savefig("Output/Images/{}.png".format(name))
+        plt.savefig("Output/Images/{}.png".format(count))
     plt.close()
 
 def precision_at_k(y_true, y_scores, k):
@@ -173,13 +168,13 @@ def get_x_and_y(filename):
     df = df.drop(df.columns[[0]], axis=1)
     return df, Y
 
-def main(filename):
+def main():
     '''
     Executes functions sequentially, records main classifiers to output text file
     '''
     clfs, grid = define_clfs_params()
     # models_to_run = ['LR','ET','AB','GB','NB','DT', 'KNN','RF']
-    models_to_run = ["RF", "LR", "GB"]
+    models_to_run = ["RF"]
     # X, y = get_x_and_y(filename)
     X, y = gen.go('../Example/resolved_joined.csv')
     top =  magic_loop(models_to_run, clfs, grid, X, y)
@@ -187,4 +182,4 @@ def main(filename):
 
 if __name__ == '__main__':
     print ("================= Running test at {} ====================".format(str(datetime.datetime.now())))
-    main(FILE)
+    main()

@@ -10,9 +10,11 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.datasets import make_classification
 from sklearn.ensemble import ExtraTreesClassifier
 
+filename = '../Example/resolved_joined.csv'
+
 ##Binning: WTF is going on with my function?
 #Pr: If time, sort into Objective, subjective
-# DROP_LIST = ['Unnamed: 0', 'Fiscal Year', 'Region', 
+# DROP_LIST = ['Unnamed: 0', 'Fiscal Year', 'Region',
 #        'Borrower Country Code', 'Procurement Type', 'Procurement Category',
 #        'Procurement Method', 'Product line', 'Major Sector_x',
 #        'Contract Signing Date', 'Supplier Country', 'Supplier Country Code',
@@ -33,12 +35,9 @@ from sklearn.ensemble import ExtraTreesClassifier
 #        'borrower', 'impagency']
 # DUMMY_LIST = ['Borrower Country']
 # LOG_LIST = ['contract_amount']
-# BINARY_LIST = ['caseoutcome', 'project_amount'] 
+# BINARY_LIST = ['caseoutcome', 'project_amount']
 # # BINNING_LIST = [('project_amount', 100)]
 # Y_VAR = 'caseoutcome'
-
-
-######################################################################################################
 
 DROP_LIST = ['Unnamed: 0','Contract Signing Date','Total Contract Amount (USD)','Begin Appraisal Date',
        'Borrower Contract Number', 'Project Name_y','approval_date',
@@ -190,14 +189,7 @@ def go(filename):
     feature_importance(x, y, 10)
     return x, y
 
-<<<<<<< HEAD
-
 
 if __name__ == "__main__":
     filename = '../Example/resolved_joined.csv'
-go(filename)
-=======
-# if __name__ == "__main__":
-#     filename = '../Example/resolved_joined.csv'
-# go(filename)
->>>>>>> df1718c05b9ef9b7f53c614e739d91632c02f02c
+    go(filename)
