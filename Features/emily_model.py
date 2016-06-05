@@ -72,7 +72,7 @@ def magic_loop(models_to_run, clfs, grid, X, y):
     heapq.heapify(top)
     k = 0.05
     for n in range(1, 2):
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = n)
         for index, clf in enumerate([clfs[x] for x in models_to_run]):
             for p in ParameterGrid(grid[models_to_run[index]]):
                 try:
@@ -179,7 +179,11 @@ def main(filename):
     '''
     clfs, grid = define_clfs_params()
     # models_to_run = ['LR','ET','AB','GB','NB','DT', 'KNN','RF']
+<<<<<<< HEAD
     models_to_run = ["RF", "LR", "GB"]
+=======
+    models_to_run = [ "GB", "ET", "RF", "NB"]
+>>>>>>> 1c2aa469107b4de9c007fc31360b9b63579171de
     # X, y = get_x_and_y(filename)
     X, y = gen.go('../Example/resolved_joined.csv')
     top =  magic_loop(models_to_run, clfs, grid, X, y)
