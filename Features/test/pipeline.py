@@ -61,7 +61,7 @@ def magic_loop(x, y):
         with open('best_models.csv', 'w') as csvfile:
             c = csv.writer(csvfile, delimiter=',')
             c.writerow(['MODEL', 'PARAMETERS', 'PRECISION', 'RECALL', 'AUC', 'F1', 'ACCURACY', 'Time'])
-            x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=0)
+            x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=1)
             print(len(y_train), len(y_test))
             class_auc = {}
             best_model = ''
