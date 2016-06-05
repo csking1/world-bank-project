@@ -144,19 +144,6 @@ def fix_predictor(df, Y_VAR):
     '''
     df[Y_VAR] = df[Y_VAR].apply(predictor_helper)
 
-def second_feature_importance(x, y):
-    pass
-
-# create a base classifier used to evaluate a subset of attributes
-    model = ExtraTreesClassifier()
-    model.fit(x, y)
-    importances = model.feature_importances
-
-    # rfe = RFE(model, 5)
-    # rfe = rfe.fit(x, y)
-    # print(len(rfe.support_))
-    # print(rfe.ranking_[:10])
-
 def feature_importance(x, y, k, df):
     not_zero = 0
     forest = ExtraTreesClassifier(n_estimators=250, random_state=0)
@@ -176,7 +163,6 @@ def feature_importance(x, y, k, df):
             not_zero +=1
     print ("Amount of features not zero is: %d" % (not_zero))
 
-
     plt.figure()
     plt.title("Feature importances")
     plt.bar(range(x.shape[1]), importances[indices],
@@ -188,7 +174,6 @@ def feature_importance(x, y, k, df):
 
 def go(filename):
     df = read_data(filename)
-    # print (df.loc[column_indexer = 985])
     df = df.convert_objects(convert_numeric=True)
     fix_predictor(df, Y_VAR)
     df = get_dummies(df)
@@ -197,8 +182,6 @@ def go(filename):
     df = binning(df)
     df = drop_columns(df)
     x, y = feature_generation(df)
-    # second_feature_importance(x, y)
-    # second_feature_importance(x, y)
     feature_importance(x, y, 10, df)
     return x, y
 
