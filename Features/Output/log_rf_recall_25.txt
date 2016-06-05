@@ -1279,7 +1279,13 @@ RandomForestClassifier(bootstrap=True, compute_importances=None,
 {'auc': 0.8362745098039216, 'precision': 0.5}
 
 
-({'auc': 0.87549019607843137, 'precision': 0.65000000000000002}, 113, RandomForestClassifier(bootstrap=True, compute_importances=None,
+
+
+({'auc': 0.87549019607843137, 'precision': 0.65000000000000002}, 113,
+
+
+
+RandomForestClassifier(bootstrap=True, compute_importances=None,
             criterion='gini', max_depth=100, max_features='log2',
             max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
             min_samples_split=10, n_estimators=10000, n_jobs=-1,
