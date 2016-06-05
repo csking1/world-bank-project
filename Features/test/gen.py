@@ -6,35 +6,27 @@ from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2
 from sklearn.linear_model import LogisticRegression
 
-DROP_LIST = ['Unnamed: 0',
-       'Contract Signing Date',
-       'Total Contract Amount (USD)',
-       'Begin Appraisal Date', 'Borrower Contract Number',
-       'Procurement Method ID', 'Project Name_y', 'allegation_category',
-       'allegation_outcome', 'allegation_type', 'approval_date',
+##Binning: WTF is going on with my function?
+#procurement_method_id: If time, sort into Objective, subjective
+
+DROP_LIST = ['Unnamed: 0','Contract Signing Date','Total Contract Amount (USD)','Begin Appraisal Date',
+       'Borrower Contract Number', 'Project Name_y','approval_date',
        'bank_approval_date', 'begin_appraisal_date', 'begin_preparation_date',
-       'closing_date', 'complaint_status',
-       'concept_review_date', 'contract_amount', 'contract_sign-off_date',
-       'country', 'date_case_opened', 'date_complaint_opened',
-       'decision_meeting_date', 'effectiveness_date', 'lead_investigator',
-       'major_sector', 'no_objection_date', 'procurement_method_id',
-       'procurement_type_description', 'project_amount', 'signing_date', 'vpu',
-       'regionname', 'prodline', 'lendinginstr', 'lendinginstrtype',
-       'boardapprovaldate', 'board_approval_month', 'closingdate',
-       'lendprojectcost', 'ibrdcommamt', 'idacommamt', 'totalamt', 'grantamt',
-       'borrower', 'impagency']
+       'closing_date','concept_review_date', 'contract_sign-off_date', 
+       'date_case_opened', 'date_complaint_opened','decision_meeting_date', 'effectiveness_date',
+       'no_objection_date','procurement_type_description', 'signing_date', 'vpu',
+       'regionname', 'prodline', 'lendinginstr', 'lendinginstrtype','boardapprovaldate', 'board_approval_month', 'closingdate',
+       'lendprojectcost', 'ibrdcommamt', 'idacommamt', 'totalamt', 'grantamt','borrower', 'impagency']
 
 DUMMY_LIST = ['Region', 'Fiscal Year', 'Borrower Country','Borrower Country Code', 'Procurement Type', \
 'Procurement Category','Procurement Method', 'Product line', 'Major Sector_x', 'Supplier Country', \
-'Supplier Country Code', 'resolved_supplier']
-# DUMMY_LIST = ['Region', 'Fiscal Year', 'major_sector', 'procurement_category', \
-# 'procurement_method', 'procurement_type', 'product_line',  'country', 'country_name_standardized', \
-# 'supplier_country_code']
-BINARY_LIST = ['caseoutcome'] 
-# BINARY_LIST = ['allegation_outcome', 'objective', 'competitive']
+'Supplier Country Code', 'resolved_supplier', 'allegation_category',  'allegation_outcome', 'allegation_type', \
+'complaint_status','country', 'lead_investigator', 'major_sector', 'procurement_method_id']
 
-BINNING_LIST = [("amount_standardized", 10), ("ppp", 20)]
+LOG_LIST = ['contract_amount']
 
+BINARY_LIST = ['caseoutcome', 'project_amount'] 
+BINNING_LIST = [('project_amount', 100)]
 Y_VAR = 'caseoutcome'
 
 def read_data(filename):
@@ -77,14 +69,20 @@ def binning(dataframe):
         bins = each[1]
         col = binning_helper(dataframe, variable, bins) 
         dataframe[each] = dataframe[col]
+    return dataframe
 
 def drop_columns(df):
     for col in DROP_LIST:
-        try:
-            df = df.drop(col, axis=1)
-        except:
-            print(col)
-            continue
+        df = df.drop(col, axis=1)
+    return df
+def get_log(df):
+    '''
+    get_log takes a string column, converts to a float, and then takes the log of values
+    '''
+    for col in LOG_LIST:
+        df[col] = df[col].fillna(0)
+        ## df[col] = df[col].astype('float64')  don't think I need this line since I'm force-converrting entire DF
+        df[col] = df[col].apply(lambda x: np.log(x + 1))
     return df
 
 def feature_generation(dataframe):
@@ -99,7 +97,6 @@ def feature_generation(dataframe):
 
 def impute_zeros(df, column):
     df[column] = df[column].fillna(0)
-
 def drop_rows(df):
     df = df.dropna(subset = [Y_VAR])
     return df
@@ -118,15 +115,18 @@ def fix_predictor(df, Y_VAR):
 
 def go(filename):
     df = read_data(filename)
+    print (df['procurement_method_id'].unique())
+    df = df.convert_objects(convert_numeric=True)
     fix_predictor(df, Y_VAR)
-    #binning(df)
     df = get_dummies(df)
     create_binary(df)
-
     df = drop_columns(df)
+    df = get_log(df)
+    df = binning(df)
+    # print (df.columns)
     x, y = feature_generation(df)
     return x, y
 
-#if __name__ == "__main__":
-#    filename = '../../Example/resolved_joined.csv'
-#go(filename)
+# if __name__ == "__main__":
+#     filename = '../Example/resolved_joined.csv'
+# go(filename)
