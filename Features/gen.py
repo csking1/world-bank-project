@@ -10,36 +10,6 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.datasets import make_classification
 from sklearn.ensemble import ExtraTreesClassifier
 
-##Binning: WTF is going on with my function?
-#Pr: If time, sort into Objective, subjective
-# DROP_LIST = ['Unnamed: 0', 'Fiscal Year', 'Region', 
-#        'Borrower Country Code', 'Procurement Type', 'Procurement Category',
-#        'Procurement Method', 'Product line', 'Major Sector_x',
-#        'Contract Signing Date', 'Supplier Country', 'Supplier Country Code',
-#        'Total Contract Amount (USD)', 'resolved_supplier',
-#        'Begin Appraisal Date', 'Borrower Contract Number',
-#        'Procurement Method ID', 'Project Name_y', 'allegation_category',
-#        'allegation_outcome', 'allegation_type', 'approval_date',
-#        'bank_approval_date', 'begin_appraisal_date', 'begin_preparation_date',
-#       'closing_date', 'complaint_status',
-#        'concept_review_date', 'contract_sign-off_date',
-#        'country', 'date_case_opened', 'date_complaint_opened',
-#        'decision_meeting_date', 'effectiveness_date', 'lead_investigator',
-#        'major_sector', 'no_objection_date', 'procurement_method_id',
-#        'procurement_type_description', 'project_amount', 'signing_date', 'vpu',
-#        'regionname', 'prodline', 'lendinginstr', 'lendinginstrtype',
-#        'boardapprovaldate', 'board_approval_month', 'closingdate',
-#        'lendprojectcost', 'ibrdcommamt', 'idacommamt', 'totalamt', 'grantamt',
-#        'borrower', 'impagency']
-# DUMMY_LIST = ['Borrower Country']
-# LOG_LIST = ['contract_amount']
-# BINARY_LIST = ['caseoutcome', 'project_amount'] 
-# # BINNING_LIST = [('project_amount', 100)]
-# Y_VAR = 'caseoutcome'
-
-
-######################################################################################################
-
 DROP_LIST = ['Unnamed: 0','Contract Signing Date','Total Contract Amount (USD)','Begin Appraisal Date',
        'Borrower Contract Number','Procurement Method ID', 'Project Name_y','approval_date',
        'bank_approval_date', 'begin_appraisal_date', 'begin_preparation_date',
@@ -83,7 +53,6 @@ def create_binary(df):
         df[column] = df[column].fillna("missing")
         df[column] = df[column].astype('category')
         df[column] = df[column].cat.codes
-    # df[column] = df[column].apply(binary_helper)
 
 def binning_helper(dataframe, variable, bins):
 
@@ -112,26 +81,36 @@ def get_log(df):
     '''
     for col in LOG_LIST:
         df[col] = df[col].fillna(0)
-        ## df[col] = df[col].astype('float64')  don't think I need this line since I'm force-converrting entire DF
         df[col] = df[col].apply(lambda x: np.log(x + 1))
     return df
 
 def feature_generation(dataframe):
+    '''
+    Takes a df and separates the X columns from the y columns
+    A simple LR  model is included to  ensure the X, Y columns can run through a model 
+    '''
     y = dataframe[Y_VAR]
     y = np.ravel(y)
     x = dataframe.drop(Y_VAR, 1)
-    model = LogisticRegression()
-    model = model.fit(x, y)
-    testing = model.score(x, y)
+    # model = LogisticRegression()
+    # model = model.fit(x, y)
+    # testing = model.score(x, y)
     # print ("accuracy score of {}".format(testing))
     return x, y
 
 def impute_zeros(df, column):
+    '''
+    Imputing function
+    '''
     df[column] = df[column].fillna(0)
+
 def drop_rows(df):
     df = df.dropna(subset = [Y_VAR])
     return df
 def predictor_helper(x):
+    '''
+    Helper function to fix the predictor value
+    '''
     if x == "Substantiated":
         return int(1)
     else:
@@ -145,7 +124,14 @@ def fix_predictor(df, Y_VAR):
     df[Y_VAR] = df[Y_VAR].apply(predictor_helper)
 
 def feature_importance(x, y, k, df):
+    '''
+    Takes an x, y, top k value, and dataframe
+    Returns a list of top k features as well as number of features that have 0 MDI and number of 
+    features that have an MDI below .005. 
+    Outputs feature distribution graph
+    '''
     not_zero = 0
+    under_01 = 0
     forest = ExtraTreesClassifier(n_estimators=250, random_state=0)
     forest.fit(x, y)
     importances = forest.feature_importances_
@@ -156,12 +142,15 @@ def feature_importance(x, y, k, df):
     for f in range(k):
         next = indices[f] + 1
         print("%d. feature %d, %s (%f)" % (f + 1, indices[f],  list(df.ix[:, indices[f]:next]), importances[indices[f]]))
-
     ######Reports how many variables have a 0 level 
     for f in range(x.shape[1]):
         if importances[indices[f]] != 0:
             not_zero +=1
+        if importances[indices[f]] <= .005:
+            under_01 +=1
+
     print ("Amount of features not zero is: %d" % (not_zero))
+    print ("Amount of features under .0 is: %d" % (under_01))
 
     plt.figure()
     plt.title("Feature importances")
@@ -170,12 +159,31 @@ def feature_importance(x, y, k, df):
     plt.xticks(range(x.shape[1]), indices)
     plt.xlim([-1, x.shape[1]])
     plt.show()
-
+def top_feature_analysis(df):
+    '''
+    A very ugly yet useful function for further exploring the best two performing features. Not general purpose 
+    and not really good for anything else. 
+    '''
+    #######################top 1 feature################
+    print (df['vpu'].value_counts())
+    vpu = df.loc[df['caseoutcome'] == 1]
+    print (vpu['vpu'].value_counts())
+    #######################top 2 feature###############
+    print (df['lead_investigator'].value_counts())
+    invest = (len(list(df['lead_investigator'].value_counts())))
+    invest = list(df['lead_investigator'].value_counts())
+    plt.plot(invest)
+    plt.xlabel("Number of Investigators")
+    plt.ylabel("Number of Investigations")
+    plt.show()
+    baha = df.loc[df['caseoutcome'] == 1]
+    print(baha['lead_investigator'].value_counts())
 
 def go(filename):
     df = read_data(filename)
-    df = df.convert_objects(convert_numeric=True)
     fix_predictor(df, Y_VAR)
+    top_feature_analysis(df)
+    df = df.convert_objects(convert_numeric=True)
     df = get_dummies(df)
     create_binary(df)
     df = get_log(df)
@@ -183,6 +191,7 @@ def go(filename):
     df = drop_columns(df)
     x, y = feature_generation(df)
     feature_importance(x, y, 10, df)
+
     return x, y
 
 if __name__ == "__main__":
