@@ -41,20 +41,21 @@ from sklearn.ensemble import ExtraTreesClassifier
 ######################################################################################################
 
 DROP_LIST = ['Unnamed: 0','Contract Signing Date','Total Contract Amount (USD)','Begin Appraisal Date',
-       'Borrower Contract Number', 'Project Name_y','approval_date',
+       'Borrower Contract Number','Procurement Method ID', 'Project Name_y','approval_date',
        'bank_approval_date', 'begin_appraisal_date', 'begin_preparation_date',
-       'closing_date','concept_review_date', 'contract_sign-off_date',
+       'closing_date','concept_review_date', 'contract_sign-off_date', 
        'date_case_opened', 'date_complaint_opened','decision_meeting_date', 'effectiveness_date',
        'no_objection_date','procurement_type_description', 'signing_date','boardapprovaldate', 'closingdate',
-       'lendprojectcost', 'ibrdcommamt', 'idacommamt', 'totalamt', 'grantamt', 'Borrower Country', 'Borrower Country Code']
+       'lendprojectcost', 'ibrdcommamt', 'idacommamt', 'totalamt', 'grantamt']
 
-DUMMY_LIST = ['Region', 'Fiscal Year', 'Procurement Type', \
+DUMMY_LIST = ['Region', 'Fiscal Year', 'Borrower Country','Borrower Country Code', 'Procurement Type', \
 'Procurement Category','Procurement Method', 'Product line', 'Major Sector_x', 'Supplier Country', \
 'Supplier Country Code', 'resolved_supplier', 'allegation_category',  'allegation_outcome', 'allegation_type', \
-'complaint_status','country', 'lead_investigator', 'major_sector', 'procurement_method_id', 'regionname', 'vpu', 'prodline',
+'complaint_status','country', 'lead_investigator', 'major_sector', 'procurement_method_id', 'regionname', 'vpu', 'prodline', 
 'lendinginstr', 'lendinginstrtype','board_approval_month', 'borrower',  'impagency']
+
 LOG_LIST = ['contract_amount']
-BINARY_LIST = ['caseoutcome', 'project_amount']
+BINARY_LIST = ['caseoutcome', 'project_amount'] 
 BINNING_LIST = [('project_amount', 100)]
 Y_VAR = 'caseoutcome'
 
@@ -144,6 +145,7 @@ def fix_predictor(df, Y_VAR):
     df[Y_VAR] = df[Y_VAR].apply(predictor_helper)
 
 def second_feature_importance(x, y):
+    pass
 
 # create a base classifier used to evaluate a subset of attributes
     model = ExtraTreesClassifier()
@@ -155,7 +157,8 @@ def second_feature_importance(x, y):
     # print(len(rfe.support_))
     # print(rfe.ranking_[:10])
 
-def feature_importance(x, y, k):
+def feature_importance(x, y, k, df):
+    not_zero = 0
     forest = ExtraTreesClassifier(n_estimators=250, random_state=0)
     forest.fit(x, y)
     importances = forest.feature_importances_
@@ -163,8 +166,17 @@ def feature_importance(x, y, k):
              axis=0)
     indices = np.argsort(importances)[::-1]
     print("Feature ranking:")
+    for f in range(k):
+        next = indices[f] + 1
+        print("%d. feature %d, %s (%f)" % (f + 1, indices[f],  list(df.ix[:, indices[f]:next]), importances[indices[f]]))
+
+    ######Reports how many variables have a 0 level 
     for f in range(x.shape[1]):
-        print("%d. feature %d (%f)" % (f + 1, indices[f], importances[indices[f]]))
+        if importances[indices[f]] != 0:
+            not_zero +=1
+    print ("Amount of features not zero is: %d" % (not_zero))
+
+
     plt.figure()
     plt.title("Feature importances")
     plt.bar(range(x.shape[1]), importances[indices],
@@ -176,28 +188,21 @@ def feature_importance(x, y, k):
 
 def go(filename):
     df = read_data(filename)
+    # print (df.loc[column_indexer = 985])
     df = df.convert_objects(convert_numeric=True)
-    # print (df['date_case_opened'].unique())
     fix_predictor(df, Y_VAR)
     df = get_dummies(df)
     create_binary(df)
-    df = drop_columns(df)
     df = get_log(df)
     df = binning(df)
+    df = drop_columns(df)
     x, y = feature_generation(df)
     # second_feature_importance(x, y)
     # second_feature_importance(x, y)
-    feature_importance(x, y, 10)
+    feature_importance(x, y, 10, df)
     return x, y
-
-<<<<<<< HEAD
-
 
 if __name__ == "__main__":
     filename = '../Example/resolved_joined.csv'
 go(filename)
-=======
-# if __name__ == "__main__":
-#     filename = '../Example/resolved_joined.csv'
-# go(filename)
->>>>>>> df1718c05b9ef9b7f53c614e739d91632c02f02c
+
