@@ -1,13 +1,44 @@
 import csv
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.feature_selection import RFE
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2
 from sklearn.linear_model import LogisticRegression
+from sklearn.datasets import make_classification
+from sklearn.ensemble import ExtraTreesClassifier
 
 ##Binning: WTF is going on with my function?
 #Pr: If time, sort into Objective, subjective
+# DROP_LIST = ['Unnamed: 0', 'Fiscal Year', 'Region', 
+#        'Borrower Country Code', 'Procurement Type', 'Procurement Category',
+#        'Procurement Method', 'Product line', 'Major Sector_x',
+#        'Contract Signing Date', 'Supplier Country', 'Supplier Country Code',
+#        'Total Contract Amount (USD)', 'resolved_supplier',
+#        'Begin Appraisal Date', 'Borrower Contract Number',
+#        'Procurement Method ID', 'Project Name_y', 'allegation_category',
+#        'allegation_outcome', 'allegation_type', 'approval_date',
+#        'bank_approval_date', 'begin_appraisal_date', 'begin_preparation_date',
+#       'closing_date', 'complaint_status',
+#        'concept_review_date', 'contract_sign-off_date',
+#        'country', 'date_case_opened', 'date_complaint_opened',
+#        'decision_meeting_date', 'effectiveness_date', 'lead_investigator',
+#        'major_sector', 'no_objection_date', 'procurement_method_id',
+#        'procurement_type_description', 'project_amount', 'signing_date', 'vpu',
+#        'regionname', 'prodline', 'lendinginstr', 'lendinginstrtype',
+#        'boardapprovaldate', 'board_approval_month', 'closingdate',
+#        'lendprojectcost', 'ibrdcommamt', 'idacommamt', 'totalamt', 'grantamt',
+#        'borrower', 'impagency']
+# DUMMY_LIST = ['Borrower Country']
+# LOG_LIST = ['contract_amount']
+# BINARY_LIST = ['caseoutcome', 'project_amount'] 
+# # BINNING_LIST = [('project_amount', 100)]
+# Y_VAR = 'caseoutcome'
+
+
+######################################################################################################
 
 DROP_LIST = ['Unnamed: 0','Contract Signing Date','Total Contract Amount (USD)','Begin Appraisal Date',
        'Borrower Contract Number','Procurement Method ID', 'Project Name_y','approval_date',
@@ -15,9 +46,9 @@ DROP_LIST = ['Unnamed: 0','Contract Signing Date','Total Contract Amount (USD)',
        'closing_date','concept_review_date', 'contract_sign-off_date', 
        'date_case_opened', 'date_complaint_opened','decision_meeting_date', 'effectiveness_date',
        'no_objection_date','procurement_type_description', 'signing_date','boardapprovaldate', 'closingdate',
-       'lendprojectcost', 'ibrdcommamt', 'idacommamt', 'totalamt', 'grantamt']
+       'lendprojectcost', 'ibrdcommamt', 'idacommamt', 'totalamt', 'grantamt', 'Borrower Country', 'Borrower Country Code']
 
-DUMMY_LIST = ['Region', 'Fiscal Year', 'Borrower Country','Borrower Country Code', 'Procurement Type', \
+DUMMY_LIST = ['Region', 'Fiscal Year', 'Procurement Type', \
 'Procurement Category','Procurement Method', 'Product line', 'Major Sector_x', 'Supplier Country', \
 'Supplier Country Code', 'resolved_supplier', 'allegation_category',  'allegation_outcome', 'allegation_type', \
 'complaint_status','country', 'lead_investigator', 'major_sector', 'procurement_method_id', 'regionname', 'vpu', 'prodline', 
@@ -111,20 +142,55 @@ def fix_predictor(df, Y_VAR):
     '''
     df[Y_VAR] = df[Y_VAR].apply(predictor_helper)
 
+def second_feature_importance(x, y):
+
+# create a base classifier used to evaluate a subset of attributes
+    model = ExtraTreesClassifier()
+    model.fit(x, y)
+    importances = model.feature_importances
+
+    # rfe = RFE(model, 5)
+    # rfe = rfe.fit(x, y)
+    # print(len(rfe.support_))
+    # print(rfe.ranking_[:10])
+
+def feature_importance(x, y, k):
+    forest = ExtraTreesClassifier(n_estimators=250, random_state=0)
+    forest.fit(x, y)
+    importances = forest.feature_importances_
+    std = np.std([tree.feature_importances_ for tree in forest.estimators_],
+             axis=0)
+    indices = np.argsort(importances)[::-1]
+    print("Feature ranking:")
+    for f in range(x.shape[1]):
+        print("%d. feature %d (%f)" % (f + 1, indices[f], importances[indices[f]]))
+    plt.figure()
+    plt.title("Feature importances")
+    plt.bar(range(x.shape[1]), importances[indices],
+       color="r", yerr=std[indices], align="center")
+    plt.xticks(range(x.shape[1]), indices)
+    plt.xlim([-1, x.shape[1]])
+    plt.show()
+
+
 def go(filename):
     df = read_data(filename)
     df = df.convert_objects(convert_numeric=True)
-    print (df['date_case_opened'].unique())
+    # print (df['date_case_opened'].unique())
     fix_predictor(df, Y_VAR)
     df = get_dummies(df)
     create_binary(df)
     df = drop_columns(df)
     df = get_log(df)
     df = binning(df)
-    # print (df.columns)
     x, y = feature_generation(df)
+    # second_feature_importance(x, y)
+    # second_feature_importance(x, y)
+    feature_importance(x, y, 10)
     return x, y
 
-# if __name__ == "__main__":
-#     filename = '../Example/resolved_joined.csv'
-# go(filename)
+
+
+if __name__ == "__main__":
+    filename = '../Example/resolved_joined.csv'
+go(filename)
