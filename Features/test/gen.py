@@ -102,9 +102,9 @@ def drop_rows(df):
     return df
 def predictor_helper(x):
     if x == "Substantiated":
-        return int(1)
-    else:
         return int(0)
+    else:
+        return int(1)
 
 def fix_predictor(df, Y_VAR):
     '''

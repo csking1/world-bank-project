@@ -23,7 +23,7 @@ import matplotlib.pyplot as plt
 import time as t
 
 # MODELS = ['LR', 'DT', 'RF']
-MODELS = ['LR', 'DT', 'KNN', 'RF', 'NB', 'GB', 'AB', 'BG']
+MODELS =['LR', 'DT', 'KNN', 'RF', 'NB', 'GB', 'AB', 'BG']
 
 clfs = {'RF': RandomForestClassifier(n_estimators=50, n_jobs=-1),
         'ET': ExtraTreesClassifier(n_estimators=10, n_jobs=-1, criterion='entropy'),
@@ -39,7 +39,7 @@ clfs = {'RF': RandomForestClassifier(n_estimators=50, n_jobs=-1),
 
 grid = {
     'RF':{'n_estimators': [1,10,100], 'max_depth': [1,5,10], 'max_features': ['sqrt','log2'],'min_samples_split': [2,5,10]},
-    'LR': { 'penalty': ['l1','l2'], 'C': [0.00001,0.0001,0.001,0.01,0.1,1,10]},
+    'LR': { 'penalty': ['l2'], 'C': [0.00001]},#['l1','l2'], 'C': [0.00000001, 0.0000001, 0.000001, 0.00001]},# [0.0000001, 0.00001,0.0001,0.001,0.01,0.1,1,10]},
     'ET': { 'n_estimators': [1,10,100], 'criterion' : ['gini', 'entropy'] ,'max_depth': [1,5,10,20,50], 'max_features': ['sqrt','log2'],'min_samples_split': [2,5,10]},
     'AB': { 'algorithm': ['SAMME', 'SAMME.R'], 'n_estimators': [1,10,100]},
     'GB': {'n_estimators': [1,10,100], 'learning_rate' : [0.01,0.1,0.5],'subsample' : [0.1,0.5,1.0], 'max_depth': [1,5,10]},
@@ -62,7 +62,7 @@ def magic_loop(x, y):
             c = csv.writer(csvfile, delimiter=',')
             c.writerow(['MODEL', 'PARAMETERS', 'PRECISION', 'RECALL', 'AUC', 'F1', 'ACCURACY', 'Time'])
             x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=0)
-
+            print(len(y_train), len(y_test))
             class_auc = {}
             best_model = ''
             best_AUC = 0
@@ -90,14 +90,27 @@ def magic_loop(x, y):
                         clf.set_params(**p)
                         y_pred_probs = clf.fit(x_train, y_train).predict_proba(x_test)[:,1]
                         precision, accuracy, recall, f1, threshold, AUC = model_evaluation(y_test, y_pred_probs,.05)
+                        #importances = clf.feature_importances
+
+#HERE_
+                        #std = np.std([tree.feature_importances_ for tree in forest.estimators_],axis=0)
+                        #indices = np.argsort(importances)[::-1]
+
+                        # Print the feature ranking
+                        #print("Feature ranking:")
+
+                        #for f in range(X.shape[1]):
+                           # print("%d. feature %d (%f)" % (f + 1, indices[f], importances[indices[f]]))
+#HERE
                         end_time = t.time()
                         total_time = end_time - start_time
                         w.writerow([current_model, p, precision, recall, AUC, f1, accuracy, total_time])
                         
                         print(current_model)
                         print(p)
-                        
-                        if AUC > class_auc[current_model]:
+                        print(len(y_pred_probs[0:]))
+                        print(y_pred_probs)
+                        if recall > class_auc[current_model]:
                             class_auc[current_model] = AUC
                             cls_ypred = y_pred_probs
                             cls_param = p
