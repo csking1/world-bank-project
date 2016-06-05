@@ -41,7 +41,7 @@ from sklearn.ensemble import ExtraTreesClassifier
 ######################################################################################################
 
 DROP_LIST = ['Unnamed: 0','Contract Signing Date','Total Contract Amount (USD)','Begin Appraisal Date',
-       'Borrower Contract Number','Procurement Method ID', 'Project Name_y','approval_date',
+       'Borrower Contract Number', 'Project Name_y','approval_date',
        'bank_approval_date', 'begin_appraisal_date', 'begin_preparation_date',
        'closing_date','concept_review_date', 'contract_sign-off_date', 
        'date_case_opened', 'date_complaint_opened','decision_meeting_date', 'effectiveness_date',
@@ -189,8 +189,14 @@ def go(filename):
     feature_importance(x, y, 10)
     return x, y
 
+<<<<<<< HEAD
 
 
 if __name__ == "__main__":
     filename = '../Example/resolved_joined.csv'
 go(filename)
+=======
+# if __name__ == "__main__":
+#     filename = '../Example/resolved_joined.csv'
+# go(filename)
+>>>>>>> df1718c05b9ef9b7f53c614e739d91632c02f02c

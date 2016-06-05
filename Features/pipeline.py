@@ -19,7 +19,7 @@ from sklearn.metrics import *
 import matplotlib.pyplot as plt
 import time as t
 
-MODELS = ['LR', 'DT']
+MODELS = ['LR', 'DT', 'KNN', 'RF', 'NB', 'GB', 'AB']
 # MODELS = ['LR','DT', 'KNN', 'RF', 'NB', 'GB', 'AB', 'BG']
 
 clfs = {'RF': RandomForestClassifier(n_estimators=50, n_jobs=-1),
