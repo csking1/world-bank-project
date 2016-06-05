@@ -129,7 +129,7 @@ def plot_precision_recall_n(y_true, y_prob, model_name):
     ax2 = ax1.twinx()
     ax2.plot(pct_above_per_thresh, recall_curve, 'r')
     ax2.set_ylabel('recall', color='r')
-    plt.show()
+    
     name = str(model_name)
     try:
         plt.title(name)
