@@ -12,7 +12,7 @@ from sklearn.linear_model import LogisticRegression
 DROP_LIST = ['Unnamed: 0','Contract Signing Date','Total Contract Amount (USD)','Begin Appraisal Date',
        'Borrower Contract Number', 'Project Name_y','approval_date',
        'bank_approval_date', 'begin_appraisal_date', 'begin_preparation_date',
-       'closing_date','concept_review_date', 'contract_sign-off_date', 
+       'closing_date','concept_review_date', 'contract_sign-off_date',
        'date_case_opened', 'date_complaint_opened','decision_meeting_date', 'effectiveness_date',
        'no_objection_date','procurement_type_description', 'signing_date','boardapprovaldate', 'closingdate',
        'lendprojectcost', 'ibrdcommamt', 'idacommamt', 'totalamt', 'grantamt']
@@ -20,10 +20,10 @@ DROP_LIST = ['Unnamed: 0','Contract Signing Date','Total Contract Amount (USD)',
 DUMMY_LIST = ['Region', 'Fiscal Year', 'Borrower Country','Borrower Country Code', 'Procurement Type', \
 'Procurement Category','Procurement Method', 'Product line', 'Major Sector_x', 'Supplier Country', \
 'Supplier Country Code', 'resolved_supplier', 'allegation_category',  'allegation_outcome', 'allegation_type', \
-'complaint_status','country', 'lead_investigator', 'major_sector', 'procurement_method_id', 'regionname', 'vpu', 'prodline', 
+'complaint_status','country', 'lead_investigator', 'major_sector', 'procurement_method_id', 'regionname', 'vpu', 'prodline',
 'lendinginstr', 'lendinginstrtype','board_approval_month', 'borrower',  'impagency']
 LOG_LIST = ['contract_amount']
-BINARY_LIST = ['caseoutcome', 'project_amount'] 
+BINARY_LIST = ['caseoutcome', 'project_amount']
 BINNING_LIST = [('project_amount', 100)]
 Y_VAR = 'caseoutcome'
 
@@ -65,7 +65,7 @@ def binning(dataframe):
     for each in BINNING_LIST:
         variable = each[0]
         bins = each[1]
-        col = binning_helper(dataframe, variable, bins) 
+        col = binning_helper(dataframe, variable, bins)
         dataframe[each] = dataframe[col]
     return dataframe
 

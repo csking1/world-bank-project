@@ -1,0 +1,3095 @@
+================= Running test at 2016-06-05 12:04:34.665015 ====================
+['02/12/2014' '03/04/2013' '11/07/2014' '06/17/2013' '12/18/2012'
+ '11/27/2012' '01/16/2015' '05/01/2013' '10/25/2012' '06/09/2014'
+ '04/10/2013' '11/25/2014' '01/20/2015' '02/10/2014' '05/14/2015'
+ '05/05/2014' '02/04/2014' '11/24/2014' '05/26/2015' '04/08/2015'
+ '09/30/2014' '11/28/2012' '01/14/2014' '06/19/2013' '05/07/2013'
+ '06/10/2014' '09/26/2014' '05/02/2013' '12/13/2012' '08/26/2013'
+ '03/25/2013' '09/25/2014' '05/06/2013' '03/19/2013' '10/19/2012'
+ '07/25/2014' '11/14/2014' '06/17/2015' '01/21/2015' '02/07/2013'
+ '11/26/2012' '06/29/2015' '09/29/2014' '12/03/2014' '04/02/2014'
+ '11/12/2013' '03/26/2015' '12/10/2014' '03/20/2013' '12/06/2012'
+ '04/08/2013' '12/11/2012' '11/29/2012' '11/11/2014' '03/05/2013'
+ '10/01/2014' '05/16/2013' '03/10/2014' '06/18/2015' '05/07/2014'
+ '11/30/2014' '06/30/2015' '09/27/2012' '05/02/2014' '01/23/2015'
+ '04/22/2014' '12/11/2013' '04/29/2014' '03/20/2015' '11/10/2014'
+ '10/18/2012' '03/12/2014' '01/08/2014' '04/07/2015' '07/29/2013'
+ '04/28/2014' '12/02/2014' '03/18/2014' '07/22/2014' '03/30/2015'
+ '06/25/2015' '06/10/2015']
+accuracy score of 0.997375328084
+======================== 1 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.52941176470588236, 'precision': 0.22077922077922077}
+======================== 2 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.68676470588235294, 'precision': 0.5714285714285714}
+======================== 3 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81176470588235294, 'precision': 0.66666666666666663}
+======================== 4 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79215686274509811, 'precision': 0.75}
+======================== 5 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80588235294117649, 'precision': 0.75}
+======================== 6 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.5, 'precision': 0.22077922077922077}
+======================== 7 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80784313725490187, 'precision': 0.25757575757575757}
+======================== 8 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82549019607843133, 'precision': 0.66666666666666663}
+======================== 9 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.7990196078431373, 'precision': 0.75}
+======================== 10 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80784313725490198, 'precision': 0.75}
+======================== 11 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.49166666666666664, 'precision': 0.22077922077922077}
+======================== 12 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.70343137254901955, 'precision': 0.47058823529411764}
+======================== 13 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.78137254901960784, 'precision': 0.6428571428571429}
+======================== 14 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79705882352941182, 'precision': 0.75}
+======================== 15 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80000000000000004, 'precision': 0.75}
+======================== 16 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.49166666666666664, 'precision': 0.22077922077922077}
+======================== 17 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.56176470588235294, 'precision': 0.23333333333333334}
+======================== 18 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83431372549019611, 'precision': 0.66666666666666663}
+======================== 19 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83235294117647052, 'precision': 0.75}
+======================== 20 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82352941176470584, 'precision': 0.75}
+======================== 21 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.73529411764705888, 'precision': 0.22077922077922077}
+======================== 22 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.60833333333333328, 'precision': 0.38095238095238093}
+======================== 23 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.85196078431372557, 'precision': 0.75}
+======================== 24 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82647058823529407, 'precision': 0.66666666666666663}
+======================== 25 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80490196078431375, 'precision': 0.75}
+======================== 26 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.5, 'precision': 0.22077922077922077}
+======================== 27 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.69901960784313721, 'precision': 0.58333333333333337}
+======================== 28 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.7803921568627451, 'precision': 0.75}
+======================== 29 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.8107843137254902, 'precision': 0.75}
+======================== 30 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81862745098039214, 'precision': 0.75}
+======================== 31 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.59166666666666667, 'precision': 0.25757575757575757}
+======================== 32 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81862745098039214, 'precision': 0.75}
+======================== 33 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81862745098039214, 'precision': 0.75}
+======================== 34 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80588235294117649, 'precision': 0.75}
+======================== 35 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80784313725490198, 'precision': 0.75}
+======================== 36 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.5, 'precision': 0.22077922077922077}
+======================== 37 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.85686274509803917, 'precision': 0.75}
+======================== 38 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81470588235294117, 'precision': 0.75}
+======================== 39 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81764705882352939, 'precision': 0.75}
+======================== 40 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80784313725490198, 'precision': 0.75}
+======================== 41 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.72205882352941186, 'precision': 0.22077922077922077}
+======================== 42 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83823529411764708, 'precision': 0.75}
+======================== 43 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.7686274509803922, 'precision': 0.75}
+======================== 44 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80588235294117649, 'precision': 0.75}
+======================== 45 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80686274509803924, 'precision': 0.75}
+======================== 46 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.60784313725490202, 'precision': 0.2537313432835821}
+======================== 47 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83137254901960789, 'precision': 0.83333333333333337}
+======================== 48 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.78921568627450989, 'precision': 0.75}
+======================== 49 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83921568627450982, 'precision': 0.75}
+======================== 50 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82450980392156858, 'precision': 0.75}
+======================== 51 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.58578431372549011, 'precision': 0.26000000000000001}
+======================== 52 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.77254901960784317, 'precision': 0.66666666666666663}
+======================== 53 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81960784313725488, 'precision': 0.75}
+======================== 54 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80392156862745101, 'precision': 0.75}
+======================== 55 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83235294117647052, 'precision': 0.75}
+======================== 56 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.53676470588235292, 'precision': 0.22666666666666666}
+======================== 57 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.71470588235294108, 'precision': 0.66666666666666663}
+======================== 58 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79117647058823526, 'precision': 0.75}
+======================== 59 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82156862745098047, 'precision': 0.75}
+======================== 60 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82843137254901955, 'precision': 0.75}
+======================== 61 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.70735294117647052, 'precision': 0.28813559322033899}
+======================== 62 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81666666666666665, 'precision': 0.83333333333333337}
+======================== 63 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.76764705882352935, 'precision': 0.75}
+======================== 64 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81274509803921569, 'precision': 0.75}
+======================== 65 =======================
+RandomForestClassifier(bootstrap=T================= Running test at 2016-06-05 12:07:59.552431 ====================
+['02/12/2014' '03/04/2013' '11/07/2014' '06/17/2013' '12/18/2012'
+ '11/27/2012' '01/16/2015' '05/01/2013' '10/25/2012' '06/09/2014'
+ '04/10/2013' '11/25/2014' '01/20/2015' '02/10/2014' '05/14/2015'
+ '05/05/2014' '02/04/2014' '11/24/2014' '05/26/2015' '04/08/2015'
+ '09/30/2014' '11/28/2012' '01/14/2014' '06/19/2013' '05/07/2013'
+ '06/10/2014' '09/26/2014' '05/02/2013' '12/13/2012' '08/26/2013'
+ '03/25/2013' '09/25/2014' '05/06/2013' '03/19/2013' '10/19/2012'
+ '07/25/2014' '11/14/2014' '06/17/2015' '01/21/2015' '02/07/2013'
+ '11/26/2012' '06/29/2015' '09/29/2014' '12/03/2014' '04/02/2014'
+ '11/12/2013' '03/26/2015' '12/10/2014' '03/20/2013' '12/06/2012'
+ '04/08/2013' '12/11/2012' '11/29/2012' '11/11/2014' '03/05/2013'
+ '10/01/2014' '05/16/2013' '03/10/2014' '06/18/2015' '05/07/2014'
+ '11/30/2014' '06/30/2015' '09/27/2012' '05/02/2014' '01/23/2015'
+ '04/22/2014' '12/11/2013' '04/29/2014' '03/20/2015' '11/10/2014'
+ '10/18/2012' '03/12/2014' '01/08/2014' '04/07/2015' '07/29/2013'
+ '04/28/2014' '12/02/2014' '03/18/2014' '07/22/2014' '03/30/2015'
+ '06/25/2015' '06/10/2015']
+accuracy score of 0.997375328084
+======================== 1 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.5504901960784313, 'precision': 0.22077922077922077}
+======================== 2 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.78480392156862744, 'precision': 0.45454545454545453}
+======================== 3 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79411764705882359, 'precision': 0.75}
+======================== 4 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.7990196078431373, 'precision': 0.75}
+======================== 5 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80490196078431375, 'precision': 0.75}
+======================== 6 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.5, 'precision': 0.22077922077922077}
+======================== 7 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.71911764705882353, 'precision': 0.45000000000000001}
+======================== 8 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81274509803921569, 'precision': 0.75}
+======================== 9 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82647058823529407, 'precision': 0.75}
+======================== 10 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80294117647058827, 'precision': 0.75}
+======================== 11 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.5, 'precision': 0.22077922077922077}
+======================== 12 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.48333333333333334, 'precision': 0.22077922077922077}
+======================== 13 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79264705882352937, 'precision': 0.66666666666666663}
+======================== 14 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80588235294117649, 'precision': 0.75}
+======================== 15 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.8107843137254902, 'precision': 0.75}
+======================== 16 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.52941176470588236, 'precision': 0.22077922077922077}
+======================== 17 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.55147058823529416, 'precision': 0.25}
+======================== 18 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83088235294117641, 'precision': 0.66666666666666663}
+======================== 19 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.78529411764705892, 'precision': 0.75}
+======================== 20 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81470588235294117, 'precision': 0.75}
+======================== 21 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.5, 'precision': 0.22077922077922077}
+======================== 22 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.87990196078431382, 'precision': 0.54545454545454541}
+======================== 23 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81715686274509813, 'precision': 0.75}
+======================== 24 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.7990196078431373, 'precision': 0.75}
+======================== 25 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82058823529411762, 'precision': 0.75}
+======================== 26 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.60833333333333339, 'precision': 0.265625}
+======================== 27 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.7313725490196078, 'precision': 0.36170212765957449}
+======================== 28 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.73333333333333339, 'precision': 0.66666666666666663}
+======================== 29 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82843137254901955, 'precision': 0.75}
+======================== 30 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81568627450980391, 'precision': 0.75}
+======================== 31 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.5, 'precision': 0.22077922077922077}
+======================== 32 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.77598039215686265, 'precision': 0.51851851851851849}
+======================== 33 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80392156862745101, 'precision': 0.75}
+======================== 34 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80196078431372553, 'precision': 0.75}
+======================== 35 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80882352941176472, 'precision': 0.75}
+======================== 36 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.73529411764705888, 'precision': 0.22077922077922077}
+======================== 37 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80147058823529416, 'precision': 0.75}
+======================== 38 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80882352941176472, 'precision': 0.75}
+======================== 39 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81470588235294117, 'precision': 0.75}
+======================== 40 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80588235294117649, 'precision': 0.75}
+======================== 41 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.73529411764705888, 'precision': 0.22077922077922077}
+======================== 42 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79362745098039211, 'precision': 0.66666666666666663}
+======================== 43 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.76960784313725483, 'precision': 0.75}
+======================== 44 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79705882352941171, 'precision': 0.75}
+======================== 45 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80588235294117649, 'precision': 0.75}
+======================== 46 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.478921568627451, 'precision': 0.21333333333333335}
+======================== 47 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.75490196078431371, 'precision': 0.66666666666666663}
+======================== 48 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81176470588235294, 'precision': 0.75}
+======================== 49 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.8362745098039216, 'precision': 0.75}
+======================== 50 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82549019607843133, 'precision': 0.75}
+======================== 51 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.49019607843137258, 'precision': 0.21568627450980393}
+======================== 52 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.67009803921568623, 'precision': 0.53846153846153844}
+======================== 53 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.88039215686274508, 'precision': 0.75}
+======================== 54 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84705882352941175, 'precision': 0.75}
+======================== 55 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82745098039215692, 'precision': 0.75}
+======================== 56 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.63137254901960782, 'precision': 0.40000000000000002}
+======================== 57 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81029411764705883, 'precision': 0.66666666666666663}
+======================== 58 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.77843137254901962, 'precision': 0.75}
+======================== 59 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80196078431372553, 'precision': 0.75}
+======================== 60 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81666666666666665, 'precision': 0.75}
+======================== 61 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.72450980392156861, 'precision': 0.25}
+======================== 62 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.78480392156862755, 'precision': 0.66666666666666663}
+======================== 63 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.78137254901960795, 'precision': 0.75}
+======================== 64 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80686274509803924, 'precision': 0.75}
+======================== 65 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.8107843137254902, 'precision': 0.75}
+======================== 66 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.71764705882352942, 'precision': 0.41176470588235292}
+======================== 67 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.76568627450980387, 'precision': 0.83333333333333337}
+======================== 68 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81764705882352939, 'precision': 0.75}
+======================== 69 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81372549019607843, 'precision': 0.75}
+======================== 70 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81176470588235294, 'precision': 0.75}
+======================== 71 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81176470588235294, 'precision': 0.66666666666666663}
+======================== 72 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.72205882352941175, 'precision': 0.75}
+======================== 73 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.77745098039215688, 'precision': 0.75}
+======================== 74 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80980392156862746, 'precision': 0.75}
+======================== 75 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80098039215686279, 'precision': 0.75}
+======================== 76 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.47696078431372552, 'precision': 0.20930232558139536}
+======================== 77 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79754901960784319, 'precision': 0.75}
+======================== 78 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83333333333333326, 'precision': 0.75}
+======================== 79 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84215686274509816, 'precision': 0.75}
+======================== 80 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83039215686274503, 'precision': 0.75}
+======================== 81 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.57990196078431366, 'precision': 0.23529411764705882}
+======================== 82 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81176470588235294, 'precision': 0.75}
+======================== 83 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80000000000000004, 'precision': 0.66666666666666663}
+======================== 84 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81176470588235294, 'precision': 0.75}
+======================== 85 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83823529411764719, 'precision': 0.75}
+======================== 86 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.60833333333333339, 'precision': 0.28301886792452829}
+======================== 87 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.77107843137254894, 'precision': 0.66666666666666663}
+======================== 88 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.7568627450980393, 'precision': 0.75}
+======================== 89 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.8411764705882353, 'precision': 0.75}
+======================== 90 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82352941176470584, 'precision': 0.75}
+======================== 91 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.61372549019607847, 'precision': 0.22077922077922077}
+======================== 92 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83284313725490189, 'precision': 0.69230769230769229}
+======================== 93 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81568627450980391, 'precision': 0.75}
+======================== 94 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.85098039215686272, 'precision': 0.75}
+======================== 95 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84313725490196079, 'precision': 0.75}
+======================== 96 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.70931372549019611, 'precision': 0.61538461538461542}
+======================== 97 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84656862745098038, 'precision': 0.83333333333333337}
+======================== 98 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.8225490196078431, 'precision': 0.83333333333333337}
+======================== 99 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82549019607843133, 'precision': 0.75}
+======================== 100 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83039215686274503, 'precision': 0.75}
+======================== 101 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.70686274509803937, 'precision': 0.52941176470588236}
+======================== 102 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81911764705882351, 'precision': 0.75}
+======================== 103 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79019607843137252, 'precision': 0.75}
+======================== 104 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84215686274509804, 'precision': 0.75}
+======================== 105 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82450980392156858, 'precision': 0.75}
+======================== 106 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.63823529411764701, 'precision': 0.30769230769230771}
+======================== 107 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.75049019607843137, 'precision': 0.75}
+======================== 108 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79215686274509811, 'precision': 0.75}
+======================== 109 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.85294117647058831, 'precision': 0.75}
+======================== 110 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84509803921568627, 'precision': 0.75}
+======================== 111 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.69901960784313732, 'precision': 0.5}
+======================== 112 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.78382352941176481, 'precision': 0.66666666666666663}
+======================== 113 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.85196078431372557, 'precision': 0.75}
+======================== 114 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83333333333333337, 'precision': 0.75}
+======================== 115 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84313725490196079, 'precision': 0.75}
+======================== 116 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.55882352941176472, 'precision': 0.24590163934426226}
+======================== 117 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80686274509803924, 'precision': 0.66666666666666663}
+======================== 118 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82941176470588229, 'precision': 0.75}
+======================== 119 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84509803921568616, 'precision': 0.75}
+======================== 120 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82647058823529418, 'precision': 0.75}
+======================== 121 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.75637254901960771, 'precision': 0.22077922077922077}
+======================== 122 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.69411764705882351, 'precision': 0.52941176470588236}
+======================== 123 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84019607843137256, 'precision': 0.75}
+======================== 124 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84656862745098038, 'precision': 0.75}
+======================== 125 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84901960784313713, 'precision': 0.75}
+======================== 126 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.49705882352941178, 'precision': 0.22077922077922077}
+======================== 127 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.66813725490196085, 'precision': 0.66666666666666663}
+======================== 128 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80686274509803924, 'precision': 0.75}
+======================== 129 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83725490196078423, 'precision': 0.75}
+======================== 130 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83235294117647063, 'precision': 0.75}
+======================== 131 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.64754901960784306, 'precision': 0.53846153846153844}
+======================== 132 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.7671568627450982, 'precision': 0.75}
+======================== 133 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81568627450980391, 'precision': 0.75}
+======================== 134 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81666666666666665, 'precision': 0.75}
+======================== 135 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.8225490196078431, 'precision': 0.75}
+======================== 136 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.61813725490196081, 'precision': 0.46153846153846156}
+======================== 137 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.77401960784313717, 'precision': 0.75}
+======================== 138 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.86470588235294121, 'precision': 0.75}
+======================== 139 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.87058823529411766, 'precision': 0.75}
+======================== 140 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.86372549019607847, 'precision': 0.75}
+======================== 141 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.63235294117647056, 'precision': 0.53846153846153844}
+======================== 142 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83431372549019611, 'precision': 0.91666666666666663}
+======================== 143 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80294117647058827, 'precision': 0.83333333333333337}
+======================== 144 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.85490196078431369, 'precision': 0.75}
+======================== 145 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84901960784313735, 'precision': 0.75}
+======================== 146 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.56470588235294128, 'precision': 0.23999999999999999}
+======================== 147 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80686274509803912, 'precision': 0.75}
+======================== 148 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80784313725490198, 'precision': 0.75}
+======================== 149 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83921568627450982, 'precision': 0.75}
+======================== 150 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84215686274509804, 'precision': 0.75}
+======================== 151 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.71029411764705885, 'precision': 0.22077922077922077}
+======================== 152 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.76519607843137261, 'precision': 0.83333333333333337}
+======================== 153 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81470588235294117, 'precision': 0.75}
+======================== 154 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84019607843137256, 'precision': 0.75}
+======================== 155 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84999999999999998, 'precision': 0.75}
+======================== 156 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.5117647058823529, 'precision': 0.22077922077922077}
+======================== 157 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81225490196078431, 'precision': 0.83333333333333337}
+======================== 158 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80882352941176461, 'precision': 0.75}
+======================== 159 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82352941176470584, 'precision': 0.75}
+======================== 160 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82843137254901955, 'precision': 0.75}
+======================== 161 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.63921568627450975, 'precision': 0.46153846153846156}
+======================== 162 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.7852941176470587, 'precision': 0.83333333333333337}
+======================== 163 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82450980392156858, 'precision': 0.75}
+======================== 164 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82450980392156858, 'precision': 0.75}
+======================== 165 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82156862745098036, 'precision': 0.75}
+======================== 166 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.50882352941176467, 'precision': 0.22077922077922077}
+======================== 167 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79558823529411771, 'precision': 0.45454545454545453}
+======================== 168 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79509803921568634, 'precision': 0.75}
+======================== 169 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.87990196078431371, 'precision': 0.75}
+======================== 170 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.86176470588235299, 'precision': 0.75}
+======================== 171 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.75882352941176479, 'precision': 0.7142857142857143}
+======================== 172 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.86960784313725492, 'precision': 0.75}
+======================== 173 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82745098039215692, 'precision': 0.75}
+======================== 174 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.85294117647058831, 'precision': 0.75}
+======================== 175 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84901960784313724, 'precision': 0.75}
+======================== 176 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.5794117647058824, 'precision': 0.38461538461538464}
+======================== 177 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79264705882352948, 'precision': 0.75}
+======================== 178 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80098039215686279, 'precision': 0.75}
+======================== 179 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84411764705882353, 'precision': 0.75}
+======================== 180 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83823529411764708, 'precision': 0.75}
+
+
+
+({'auc': 0.83431372549019611, 'precision': 0.91666666666666663}, 142, RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0))
+
+
+================= Running test at 2016-06-05 12:20:19.624121 ====================
+['02/12/2014' '03/04/2013' '11/07/2014' '06/17/2013' '12/18/2012'
+ '11/27/2012' '01/16/2015' '05/01/2013' '10/25/2012' '06/09/2014'
+ '04/10/2013' '11/25/2014' '01/20/2015' '02/10/2014' '05/14/2015'
+ '05/05/2014' '02/04/2014' '11/24/2014' '05/26/2015' '04/08/2015'
+ '09/30/2014' '11/28/2012' '01/14/2014' '06/19/2013' '05/07/2013'
+ '06/10/2014' '09/26/2014' '05/02/2013' '12/13/2012' '08/26/2013'
+ '03/25/2013' '09/25/2014' '05/06/2013' '03/19/2013' '10/19/2012'
+ '07/25/2014' '11/14/2014' '06/17/2015' '01/21/2015' '02/07/2013'
+ '11/26/2012' '06/29/2015' '09/29/2014' '12/03/2014' '04/02/2014'
+ '11/12/2013' '03/26/2015' '12/10/2014' '03/20/2013' '12/06/2012'
+ '04/08/2013' '12/11/2012' '11/29/2012' '11/11/2014' '03/05/2013'
+ '10/01/2014' '05/16/2013' '03/10/2014' '06/18/2015' '05/07/2014'
+ '11/30/2014' '06/30/2015' '09/27/2012' '05/02/2014' '01/23/2015'
+ '04/22/2014' '12/11/2013' '04/29/2014' '03/20/2015' '11/10/2014'
+ '10/18/2012' '03/12/2014' '01/08/2014' '04/07/2015' '07/29/2013'
+ '04/28/2014' '12/02/2014' '03/18/2014' '07/22/2014' '03/30/2015'
+ '06/25/2015' '06/10/2015']
+accuracy score of 0.997375328084
+======================== 1 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+================= Running test at 2016-06-05 12:21:43.879204 ====================
+['02/12/2014' '03/04/2013' '11/07/2014' '06/17/2013' '12/18/2012'
+ '11/27/2012' '01/16/2015' '05/01/2013' '10/25/2012' '06/09/2014'
+ '04/10/2013' '11/25/2014' '01/20/2015' '02/10/2014' '05/14/2015'
+ '05/05/2014' '02/04/2014' '11/24/2014' '05/26/2015' '04/08/2015'
+ '09/30/2014' '11/28/2012' '01/14/2014' '06/19/2013' '05/07/2013'
+ '06/10/2014' '09/26/2014' '05/02/2013' '12/13/2012' '08/26/2013'
+ '03/25/2013' '09/25/2014' '05/06/2013' '03/19/2013' '10/19/2012'
+ '07/25/2014' '11/14/2014' '06/17/2015' '01/21/2015' '02/07/2013'
+ '11/26/2012' '06/29/2015' '09/29/2014' '12/03/2014' '04/02/2014'
+ '11/12/2013' '03/26/2015' '12/10/2014' '03/20/2013' '12/06/2012'
+ '04/08/2013' '12/11/2012' '11/29/2012' '11/11/2014' '03/05/2013'
+ '10/01/2014' '05/16/2013' '03/10/2014' '06/18/2015' '05/07/2014'
+ '11/30/2014' '06/30/2015' '09/27/2012' '05/02/2014' '01/23/2015'
+ '04/22/2014' '12/11/2013' '04/29/2014' '03/20/2015' '11/10/2014'
+ '10/18/2012' '03/12/2014' '01/08/2014' '04/07/2015' '07/29/2013'
+ '04/28/2014' '12/02/2014' '03/18/2014' '07/22/2014' '03/30/2015'
+ '06/25/2015' '06/10/2015']
+accuracy score of 0.997375328084
+======================== 1 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+================= Running test at 2016-06-05 12:37:59.662534 ====================
+['02/12/2014' '03/04/2013' '11/07/2014' '06/17/2013' '12/18/2012'
+ '11/27/2012' '01/16/2015' '05/01/2013' '10/25/2012' '06/09/2014'
+ '04/10/2013' '11/25/2014' '01/20/2015' '02/10/2014' '05/14/2015'
+ '05/05/2014' '02/04/2014' '11/24/2014' '05/26/2015' '04/08/2015'
+ '09/30/2014' '11/28/2012' '01/14/2014' '06/19/2013' '05/07/2013'
+ '06/10/2014' '09/26/2014' '05/02/2013' '12/13/2012' '08/26/2013'
+ '03/25/2013' '09/25/2014' '05/06/2013' '03/19/2013' '10/19/2012'
+ '07/25/2014' '11/14/2014' '06/17/2015' '01/21/2015' '02/07/2013'
+ '11/26/2012' '06/29/2015' '09/29/2014' '12/03/2014' '04/02/2014'
+ '11/12/2013' '03/26/2015' '12/10/2014' '03/20/2013' '12/06/2012'
+ '04/08/2013' '12/11/2012' '11/29/2012' '11/11/2014' '03/05/2013'
+ '10/01/2014' '05/16/2013' '03/10/2014' '06/18/2015' '05/07/2014'
+ '11/30/2014' '06/30/2015' '09/27/2012' '05/02/2014' '01/23/2015'
+ '04/22/2014' '12/11/2013' '04/29/2014' '03/20/2015' '11/10/2014'
+ '10/18/2012' '03/12/2014' '01/08/2014' '04/07/2015' '07/29/2013'
+ '04/28/2014' '12/02/2014' '03/18/2014' '07/22/2014' '03/30/2015'
+ '06/25/2015' '06/10/2015']
+accuracy score of 0.997375328084
+======================== 1 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.52549019607843139, 'precision': 0.22077922077922077, 'accuracy': 0.22077922077922077}
+======================== 2 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.68529411764705883, 'precision': 0.53333333333333333, 'accuracy': 0.79220779220779225}
+======================== 3 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80637254901960786, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 4 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80294117647058827, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 5 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79803921568627456, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 6 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.542156862745098, 'precision': 0.22077922077922077, 'accuracy': 0.22077922077922077}
+======================== 7 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.63235294117647056, 'precision': 0.2537313432835821, 'accuracy': 0.35064935064935066}
+======================== 8 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80637254901960786, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 9 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80588235294117649, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 10 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80588235294117649, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 11 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.5, 'precision': 0.22077922077922077, 'accuracy': 0.22077922077922077}
+======================== 12 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.73872549019607836, 'precision': 0.5, 'accuracy': 0.77922077922077926}
+======================== 13 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83529411764705885, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 14 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.792156862745098, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 15 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79607843137254908, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 16 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.5455882352941176, 'precision': 0.23880597014925375, 'accuracy': 0.32467532467532467}
+======================== 17 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.59558823529411764, 'precision': 0.25862068965517243, 'accuracy': 0.41558441558441561}
+======================== 18 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.74705882352941178, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 19 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80882352941176472, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 20 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81470588235294117, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 21 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.5, 'precision': 0.22077922077922077, 'accuracy': 0.22077922077922077}
+======================== 22 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.66764705882352937, 'precision': 0.22077922077922077, 'accuracy': 0.22077922077922077}
+======================== 23 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.75196078431372548, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 24 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79117647058823537, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 25 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.8107843137254902, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 26 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.5, 'precision': 0.22077922077922077, 'accuracy': 0.22077922077922077}
+======================== 27 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.65196078431372551, 'precision': 0.28205128205128205, 'accuracy': 0.55844155844155841}
+======================== 28 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.75686274509803919, 'precision': 0.66666666666666663, 'accuracy': 0.83116883116883122}
+======================== 29 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84509803921568616, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 30 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=1, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.792156862745098, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 31 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.49166666666666664, 'precision': 0.22077922077922077, 'accuracy': 0.22077922077922077}
+======================== 32 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82303921568627447, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 33 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.85784313725490202, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 34 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80196078431372553, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 35 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80784313725490198, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 36 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.5, 'precision': 0.22077922077922077, 'accuracy': 0.22077922077922077}
+======================== 37 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.75245098039215674, 'precision': 0.66666666666666663, 'accuracy': 0.83116883116883122}
+======================== 38 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79411764705882348, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 39 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80392156862745101, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 40 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80294117647058827, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 41 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.55882352941176472, 'precision': 0.22077922077922077, 'accuracy': 0.22077922077922077}
+======================== 42 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.7583333333333333, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 43 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79509803921568634, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 44 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79117647058823537, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 45 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79705882352941182, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 46 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.61715686274509796, 'precision': 0.25, 'accuracy': 0.33766233766233766}
+======================== 47 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.5759803921568627, 'precision': 0.33333333333333331, 'accuracy': 0.72727272727272729}
+======================== 48 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82156862745098036, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 49 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.8294117647058824, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 50 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82549019607843133, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 51 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.5220588235294118, 'precision': 0.21428571428571427, 'accuracy': 0.25974025974025972}
+======================== 52 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.85784313725490202, 'precision': 0.83333333333333337, 'accuracy': 0.88311688311688308}
+======================== 53 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79313725490196085, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 54 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83235294117647063, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 55 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82941176470588229, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 56 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.55588235294117649, 'precision': 0.15384615384615385, 'accuracy': 0.66233766233766234}
+======================== 57 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79166666666666663, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 58 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84509803921568627, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 59 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79019607843137241, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 60 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=5, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82156862745098036, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 61 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.74509803921568629, 'precision': 0.40740740740740738, 'accuracy': 0.7142857142857143}
+======================== 62 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79950980392156867, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 63 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80686274509803924, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 64 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80392156862745101, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 65 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81470588235294128, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 66 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.71176470588235285, 'precision': 0.36842105263157893, 'accuracy': 0.64935064935064934}
+======================== 67 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79166666666666663, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 68 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82352941176470584, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 69 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81960784313725499, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 70 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80686274509803924, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 71 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.86568627450980395, 'precision': 0.80000000000000004, 'accuracy': 0.89610389610389607}
+======================== 72 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.7887254901960784, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 73 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83823529411764697, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 74 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81372549019607843, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 75 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80980392156862746, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 76 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.56764705882352939, 'precision': 0.25, 'accuracy': 0.33766233766233766}
+======================== 77 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.72892156862745094, 'precision': 0.58333333333333337, 'accuracy': 0.80519480519480524}
+======================== 78 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83529411764705874, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 79 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.834313725490196, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 80 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82352941176470584, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 81 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.54166666666666674, 'precision': 0.24285714285714283, 'accuracy': 0.31168831168831168}
+======================== 82 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.77696078431372551, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 83 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.78431372549019607, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 84 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84215686274509804, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 85 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83235294117647063, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 86 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.6029411764705882, 'precision': 0.23809523809523808, 'accuracy': 0.35064935064935066}
+======================== 87 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84264705882352942, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 88 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.78529411764705881, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 89 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81568627450980391, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 90 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=10, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83039215686274503, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 91 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.52941176470588236, 'precision': 0.22077922077922077, 'accuracy': 0.22077922077922077}
+======================== 92 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79607843137254897, 'precision': 0.76923076923076927, 'accuracy': 0.87012987012987009}
+======================== 93 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.85686274509803928, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 94 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84411764705882364, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 95 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84215686274509793, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 96 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.77696078431372562, 'precision': 0.66666666666666663, 'accuracy': 0.8441558441558441}
+======================== 97 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82647058823529407, 'precision': 0.66666666666666663, 'accuracy': 0.83116883116883122}
+======================== 98 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79411764705882348, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 99 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82941176470588229, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 100 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82843137254901955, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 101 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.74852941176470578, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 102 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.75343137254901971, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 103 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81862745098039214, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 104 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80980392156862746, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 105 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82352941176470584, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 106 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.54019607843137263, 'precision': 0.23529411764705882, 'accuracy': 0.54545454545454541}
+======================== 107 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.74411764705882344, 'precision': 0.58333333333333337, 'accuracy': 0.80519480519480524}
+======================== 108 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84705882352941175, 'precision': 0.66666666666666663, 'accuracy': 0.83116883116883122}
+======================== 109 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.86568627450980395, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 110 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.85686274509803928, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 111 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.61519607843137258, 'precision': 0.33333333333333331, 'accuracy': 0.7142857142857143}
+======================== 112 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.75588235294117645, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 113 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82843137254901955, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 114 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.8411764705882353, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 115 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84019607843137256, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 116 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.67156862745098034, 'precision': 0.21212121212121213, 'accuracy': 0.2857142857142857}
+======================== 117 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.74117647058823533, 'precision': 0.66666666666666663, 'accuracy': 0.83116883116883122}
+======================== 118 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81666666666666665, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 119 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84607843137254901, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 120 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=20, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84215686274509804, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 121 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.76470588235294112, 'precision': 0.22077922077922077, 'accuracy': 0.22077922077922077}
+======================== 122 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82745098039215692, 'precision': 0.83333333333333337, 'accuracy': 0.88311688311688308}
+======================== 123 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84852941176470598, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 124 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84656862745098049, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 125 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.85490196078431369, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 126 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.70686274509803926, 'precision': 0.66666666666666663, 'accuracy': 0.83116883116883122}
+======================== 127 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82303921568627447, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 128 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.81470588235294117, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 129 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82549019607843133, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 130 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83235294117647052, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 131 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.66911764705882359, 'precision': 0.58333333333333337, 'accuracy': 0.80519480519480524}
+======================== 132 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80882352941176461, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 133 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83137254901960789, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 134 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.8294117647058824, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 135 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82058823529411762, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 136 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.58431372549019611, 'precision': 0.22077922077922077, 'accuracy': 0.22077922077922077}
+======================== 137 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.8294117647058824, 'precision': 0.625, 'accuracy': 0.83116883116883122}
+======================== 138 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84901960784313735, 'precision': 0.69230769230769229, 'accuracy': 0.8441558441558441}
+======================== 139 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.85196078431372546, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 140 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.86862745098039218, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 141 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.72303921568627449, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 142 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.74558823529411766, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 143 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82745098039215692, 'precision': 0.83333333333333337, 'accuracy': 0.88311688311688308}
+======================== 144 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84215686274509793, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 145 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84607843137254901, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 146 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.70392156862745103, 'precision': 0.61538461538461542, 'accuracy': 0.81818181818181823}
+======================== 147 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.74803921568627452, 'precision': 0.66666666666666663, 'accuracy': 0.83116883116883122}
+======================== 148 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84215686274509804, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 149 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83333333333333337, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 150 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=50, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84117647058823541, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 151 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.76078431372549027, 'precision': 0.7142857142857143, 'accuracy': 0.8571428571428571}
+======================== 152 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.7112745098039216, 'precision': 0.47619047619047616, 'accuracy': 0.76623376623376627}
+======================== 153 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83137254901960789, 'precision': 0.69230769230769229, 'accuracy': 0.8441558441558441}
+======================== 154 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84215686274509804, 'precision': 0.83333333333333337, 'accuracy': 0.88311688311688308}
+======================== 155 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84313725490196079, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 156 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.67598039215686279, 'precision': 0.22077922077922077, 'accuracy': 0.22077922077922077}
+======================== 157 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.78774509803921577, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 158 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80637254901960798, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 159 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83137254901960778, 'precision': 0.83333333333333337, 'accuracy': 0.88311688311688308}
+======================== 160 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83529411764705874, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 161 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.63186274509803919, 'precision': 0.58333333333333337, 'accuracy': 0.80519480519480524}
+======================== 162 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.79950980392156867, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 163 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.80196078431372542, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 164 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82941176470588229, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 165 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='sqrt',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82745098039215681, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 166 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.60539215686274506, 'precision': 0.22077922077922077, 'accuracy': 0.22077922077922077}
+======================== 167 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.77499999999999991, 'precision': 0.6470588235294118, 'accuracy': 0.8441558441558441}
+======================== 168 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.87990196078431371, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 169 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.86617647058823521, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 170 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=2, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.85882352941176465, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 171 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.72500000000000009, 'precision': 0.58333333333333337, 'accuracy': 0.80519480519480524}
+======================== 172 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.68480392156862757, 'precision': 0.66666666666666663, 'accuracy': 0.83116883116883122}
+======================== 173 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.83823529411764708, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 174 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84607843137254901, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 175 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=5, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.84607843137254901, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 176 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.47058823529411764, 'precision': 0.16666666666666666, 'accuracy': 0.67532467532467533}
+======================== 177 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.87254901960784315, 'precision': 0.83333333333333337, 'accuracy': 0.88311688311688308}
+======================== 178 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=100, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.85196078431372546, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 179 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=1000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+{'auc': 0.82647058823529407, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+======================== 180 =======================
+RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0)
+
+
+
+{'auc': 0.83823529411764708, 'precision': 0.75, 'accuracy': 0.8571428571428571}
+
+({'auc': 0.85784313725490202, 'precision': 0.83333333333333337, 'accuracy': 0.88311688311688308}, 52, RandomForestClassifier(bootstrap=True, compute_importances=None,
+            criterion='gini', max_depth=100, max_features='log2',
+            max_leaf_nodes=None, min_density=None, min_samples_leaf=1,
+            min_samples_split=10, n_estimators=10000, n_jobs=-1,
+            oob_score=False, random_state=None, verbose=0))

@@ -59,62 +59,68 @@ def define_clfs_params():
            }
     return clfs, grid
 
+def compare_precision(scores, count, clf, top):
+    '''
+    Takes newest scores, model count, classifier and best model,
+    Compares values and stores values for the best model
+    '''
+    d, c, name = top
+
+    # We're assuming that perfect precision is a bug
+    if scores["precision"] == 1.0:
+        return top
+
+    if d["precision"] < scores["precision"]:
+        top = scores, count, clf
+    return top
+
+
 def magic_loop(models_to_run, clfs, grid, X, y):
     '''
     Takes a list of models to use, two dictionaries of classifiers and parameters, and array of X
     '''
     table = {}
     count = 0
-    top = []
-    for i in range(10):
-        top.append((0, " "))
-    heapq.heapify(top)
-    k = 0.05
+
+    # keep track of top scores dictionary, count, name
+    top = ({"precision":0}, 0, " ")
+
+    # set recall level for precision comparisons
+    k = 0.15
+
     for n in range(1, 2):
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = n)
         for index, clf in enumerate([clfs[x] for x in models_to_run]):
             for p in ParameterGrid(grid[models_to_run[index]]):
-                try:
                     clf.set_params(**p)
-                    print (clf)
                     count += 1
-		    y_pred_probs = clf.fit(X_train, y_train).predict_proba(X_test)[:,1]
-                    plot_precision_recall_n(y_test, y_pred_probs, clf, count)
-                    l = scoring(k, y_test, y_pred_probs)
-                    m, s = top[0]
-                    auc = l['auc']
-                    if auc > m:
-                        print ("switching out {}".format(auc))
-                        heapq.heapreplace(top, (auc, clf))
 
-                except:
-                    print ('Error:')
-                    continue
+                    print "======================== {} ======================= ".format(count)
+                    print (clf)
+
+                    y_pred_probs = clf.fit(X_train, y_train).predict_proba(X_test)[:,1]
+                    plot_precision_recall_n(y_test, y_pred_probs, clf, count)
+                    scores = scoring(k, y_test, y_pred_probs)
+                    print scores
+                    top = compare_precision(scores, count, clf, top)
+
     return top
 
 def scoring(k, y_test, y_pred_probs):
     '''
-    Takes results of classifier, adds metrics to result table,
+    Takes results of classifier, adds metrics to result dictionary
     '''
     l = {}
     l['precision'], y_scores = precision_at_k(y_test, y_pred_probs, k)
     fpr, tpr, thresholds = metrics.roc_curve(y_test, y_pred_probs)
-    l['fpr'] = fpr
-    l['tpr'] = tpr
     l['auc'] = metrics.auc(fpr, tpr)
-    # try:
-
-    #     l['accuracy'] = metrics.accuracy_score(y_test, y_scores)
-    # except:
-    #     print ("Couldn't get result metrics here")
-
+    l["accuracy"] = metrics.accuracy_score(y_test, y_scores)
     return l
 
 def plot_precision_recall_n(y_true, y_prob, model_name, count):
     '''
     Takes the model, plots precision and recall curves
     '''
-    # why the copy here? They both reference the same thing.
     y_score = y_prob
 
     precision_curve, recall_curve, pr_thresholds = precision_recall_curve(y_true, y_score)
@@ -140,7 +146,7 @@ def plot_precision_recall_n(y_true, y_prob, model_name, count):
 
     name = str(model_name)
     try:
-        plt.title(name)
+        plt.title("RandomForestClassifier_{}".format(count))
         plt.savefig("Output/Images/{}.png".format(count))
     except:
         name = name[:15]
@@ -154,17 +160,15 @@ def precision_at_k(y_true, y_scores, k):
     '''
     threshold = np.sort(y_scores)[::-1][int(k*len(y_scores))]
     y_pred = np.asarray([1 if i >= threshold else 0 for i in y_scores])
-    return metrics.precision_score(y_true, y_pred), y_scores
+    return metrics.precision_score(y_true, y_pred), y_pred
 
-def record_table(table):
+def record_table(top):
     '''
-    Takes dictionary, prints out results to a file
+    Takes a heap, prints out results to a file
     '''
-    with open("Output/Final_table.txt", 'w') as f:
-        f.write("Top Ten AUC Classifiers \n")
-        for clf, auc in table:
-            f.write("\nAUC: {} from {}\n".format(str(clf), auc))
-    return
+    print "===================== FINAL MODEL ======================"
+    print (top)
+
 
 def get_x_and_y(filename):
     df = pd.read_csv(filename)
@@ -178,7 +182,6 @@ def main(filename):
     Executes functions sequentially, records main classifiers to output text file
     '''
     clfs, grid = define_clfs_params()
-    # models_to_run = ['LR','ET','AB','GB','NB','DT', 'KNN','RF']
     models_to_run = [ "RF"]
     # X, y = get_x_and_y(filename)
     X, y = gen.go('../Example/resolved_joined.csv')
