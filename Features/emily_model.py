@@ -18,7 +18,7 @@ import matplotlib
 matplotlib.use('Agg')
 
 import matplotlib.pyplot as plt
-plt.style.use('ggplot')
+#plt.style.use('ggplot')
 from scipy import optimize
 import time
 from sklearn.metrics import precision_recall_curve
@@ -177,7 +177,7 @@ def main(filename):
     '''
     clfs, grid = define_clfs_params()
     # models_to_run = ['LR','ET','AB','GB','NB','DT', 'KNN','RF']
-    models_to_run = ['NB']
+    models_to_run = ['NB', "ET", "AB", "GB", "DT", "KNN", "RF"]
     # X, y = get_x_and_y(filename)
     X, y = gen.go('../Example/resolved_joined.csv')
     top =  magic_loop(models_to_run, clfs, grid, X, y)
