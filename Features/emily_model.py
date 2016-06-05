@@ -177,7 +177,7 @@ def main(filename):
     '''
     clfs, grid = define_clfs_params()
     # models_to_run = ['LR','ET','AB','GB','NB','DT', 'KNN','RF']
-    models_to_run = [ "RF"]
+    models_to_run = [ "GB", "ET", "RF", "NB"]
     # X, y = get_x_and_y(filename)
     X, y = gen.go('../Example/resolved_joined.csv')
     top =  magic_loop(models_to_run, clfs, grid, X, y)
